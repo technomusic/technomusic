@@ -1,6 +1,7 @@
 <?php
 
 $hostname = "localhost";
+$dbname = "technomusic";
 $username = "test";
 $password = "test1234";
 
