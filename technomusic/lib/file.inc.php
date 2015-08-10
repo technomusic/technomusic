@@ -1,8 +1,8 @@
 <?php
 
 $hostname = "localhost";
-$username = "filadmin";
-$password = "123abc";
+$username = "test";
+$password = "test1234";
 
 function clean($str, $charset = 'utf-8') {
     $str = htmlentities($str, ENT_NOQUOTES, $charset);
