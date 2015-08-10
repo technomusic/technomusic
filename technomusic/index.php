@@ -10,7 +10,7 @@ if (isset($_REQUEST["section"])) {
     switch ($_REQUEST["section"]) {
         case "affiche-movie-exec":
             //include("mods/movies.inc.php");
-            include("views/music-uniq-bootstrap.inc.php");
+            include("views/movie-uniq-bootstrap.inc.php");
             break;
         case "search-movie-form":
             include("views/movie-searchform-bootstrap.inc.php");
