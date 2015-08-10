@@ -1,0 +1,79 @@
+.titre{
+width:100% ;
+height:50px ;
+box-shadow:8px 8px 5px #737373 ;
+border-radius:0 0 10px 10px ;
+background-color:#EBB3B3 ;
+margin-bottom: 40px ;
+}
+.titre h1{
+color:white; 
+}
+.cadre {
+width:600px ;
+height:1200px ;
+margin:0 auto ;
+background-color:#001076 ;
+border-radius: 20px ;
+box-shadow:8px 8px 5px 3px #737373 ;
+}
+.tab1 tr td {
+border: 3px solid black ;
+height:40 ;
+color: green ;
+font-size:20px ;
+text-align:center ;
+}
+.footer{
+width:100% ;
+box-shadow:8px 8px 8px #737373 ;
+height: 60px;
+background-color: #1995dc ;
+position: fixed;
+bottom : 20px ;
+}
+.footer h3{
+color:white ;
+}
+
+.contact {
+width : 200px ;
+height : 30px ;
+margin-left : 200px ;
+color : white ;
+
+}
+body {
+background-image:url("images/image.png") ;
+}
+.movies{
+    margin-top: 50px;
+    
+}
+.url{
+    margin-top: 20px;
+    
+}
+.navbar{
+margin: 0 auto ;
+color : white ;
+position : float ;
+}
+.navbar h2 {
+color : white ;
+}
+.recherche {
+height : 30px ;
+color : white ; 
+position : float ;
+width : 200px ;
+margin-left : 1000px ;
+
+}
+.log {
+width : 100px ;
+height : 15px ;
+}
+.logg {
+display : inline ;
+}

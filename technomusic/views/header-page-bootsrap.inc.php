@@ -6,21 +6,20 @@
 		<link rel="stylesheet" href="design/bootstrap/css/bootstrap.min.css"/>
 		<!--<link rel="stylesheet" href="design/bootstrap/css/bootstrap-slate.min.css"/>-->
 		<!--<link rel="stylesheet" href="design/bootstrap/css/bootstrap-superhero.min.css"/>-->
+		<link rel="stylesheet" href="styles.css" >
 		<link rel="stylesheet" href="design/bootstrap/css/bootstrap-cerulean.min.css"/>
 	</head>
 
 	<body style="padding-top:70px;">
 		<div class="navbar navbar-default navbar-fixed-top">
 		  <div class="container">
-			<div class="navbar-header">
-			  <a href="?" class="navbar-brand">FilHebdo</a>
-			  <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			  </button>
+		  
+			<div class="navbar">
+			  <h2 align="center">TECHNOMUSIC</h2>
+			 
 			</div>
-			<div class="navbar-collapse collapse" id="navbar-main">
+			
+			<!--<div class="navbar-collapse collapse" id="navbar-main" height ="100px">
 			  <ul class="nav navbar-nav">
 				<li class="dropdown">
 				  <a class="dropdown-toggle" data-toggle="dropdown" href="?" id="themes">Menu principal <span class="caret"></span></a>
@@ -33,7 +32,7 @@
 					<li><a href="#">Concours</a></li>
 				  </ul>
 				</li>
-				<li>
+				<!--<li>
 				  <a href="#">Aide</a>
 				</li>
 				<li>
@@ -51,10 +50,16 @@
 				</li>
 			  </ul>
 
-			  <ul class="nav navbar-nav navbar-right">
-				<li><a href="#" target="_blank">Groupe Presse Wallonie Bruxelles</a></li>
-			  </ul>
+			 
 
+			</div>-->
+			<div class="recherche">recherche
+			<ul ><liclass="logg">LOGIN : <input class="log"type="text" name="login" width = "50px"></li>
+			<li>PASSWORD :<input class="log" type="password" name="password" width = "50px" ></li></ul> 
+			
+			
+			
+			
 			</div>
 		  </div>
 		</div>
