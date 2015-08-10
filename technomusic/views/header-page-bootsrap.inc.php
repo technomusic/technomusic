@@ -14,10 +14,10 @@
 		<div class="navbar navbar-default navbar-fixed-top">
 		  <div class="container">
 		  
-			<div class="navbar">
+<!--			<div class="navbar">
 			  <h2 align="center">TECHNOMUSIC</h2>
 			 
-			</div>
+			</div>-->
 			
 			<!--<div class="navbar-collapse collapse" id="navbar-main" height ="100px">
 			  <ul class="nav navbar-nav">

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Lun 10 Août 2015 à 14:21
+-- Généré le :  Lun 10 Août 2015 à 16:50
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -29,13 +29,20 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `album` (
   `Album_ID` bigint(20) NOT NULL AUTO_INCREMENT,
   `Titre` varchar(50) CHARACTER SET utf8 NOT NULL,
-  `Annee` int(11) DEFAULT NULL,
-  `Label` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `Annee` int(4) DEFAULT NULL,
   `Label_ID` bigint(20) NOT NULL,
   PRIMARY KEY (`Album_ID`),
   UNIQUE KEY `ID_Album_IND` (`Album_ID`),
   KEY `FKProduit_IND` (`Label_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Contenu de la table `album`
+--
+
+INSERT INTO `album` (`Album_ID`, `Titre`, `Annee`, `Label_ID`) VALUES
+(1, 'album1', 2015, 1),
+(2, 'album2', 2015, 2);
 
 -- --------------------------------------------------------
 
@@ -53,7 +60,15 @@ CREATE TABLE IF NOT EXISTS `artiste` (
   `Bio` varchar(10000) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`Atriste_ID`),
   UNIQUE KEY `ID_Artiste_IND` (`Atriste_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Contenu de la table `artiste`
+--
+
+INSERT INTO `artiste` (`Atriste_ID`, `Nom`, `Prenom`, `Surnom`, `Date_Naissance`, `Lieu_Naissance`, `Bio`) VALUES
+(1, 'artiste1', 'artiste1b', NULL, NULL, NULL, NULL),
+(2, 'artiste2', 'artiste2b', NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -66,7 +81,15 @@ CREATE TABLE IF NOT EXISTS `categorie` (
   `Nom` varchar(50) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`Categorie_ID`),
   UNIQUE KEY `ID_Categorie_IND` (`Categorie_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Contenu de la table `categorie`
+--
+
+INSERT INTO `categorie` (`Categorie_ID`, `Nom`) VALUES
+(1, 'cat1'),
+(2, 'cat2');
 
 -- --------------------------------------------------------
 
@@ -78,13 +101,21 @@ CREATE TABLE IF NOT EXISTS `chanson` (
   `Chanson_ID` bigint(20) NOT NULL AUTO_INCREMENT,
   `Titre` varchar(50) CHARACTER SET utf8 NOT NULL,
   `Duree` int(11) DEFAULT NULL,
-  `Annee` int(11) DEFAULT NULL,
+  `Annee` int(4) DEFAULT NULL,
   `Description` varchar(10000) CHARACTER SET utf8 DEFAULT NULL,
   `Categorie_ID` bigint(20) NOT NULL,
   PRIMARY KEY (`Chanson_ID`),
   UNIQUE KEY `ID_Chanson_IND` (`Chanson_ID`),
   KEY `FKappartient_IND` (`Categorie_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+
+--
+-- Contenu de la table `chanson`
+--
+
+INSERT INTO `chanson` (`Chanson_ID`, `Titre`, `Duree`, `Annee`, `Description`, `Categorie_ID`) VALUES
+(5, 'chanson1', 125, 2014, 'test1', 1),
+(6, 'chanson1', 126, 2015, 'test2', 2);
 
 -- --------------------------------------------------------
 
@@ -101,6 +132,14 @@ CREATE TABLE IF NOT EXISTS `chanson_album` (
   KEY `FKfai_Cha_IND` (`Chanson_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Contenu de la table `chanson_album`
+--
+
+INSERT INTO `chanson_album` (`Album_ID`, `Chanson_ID`, `Num_piste`) VALUES
+(1, 5, 1),
+(2, 6, 2);
+
 -- --------------------------------------------------------
 
 --
@@ -114,6 +153,14 @@ CREATE TABLE IF NOT EXISTS `compositeur_album` (
   UNIQUE KEY `ID_ComposeAlbum_IND` (`Album_ID`,`Atriste_ID`),
   KEY `FKCom_Art_IND` (`Atriste_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `compositeur_album`
+--
+
+INSERT INTO `compositeur_album` (`Album_ID`, `Atriste_ID`) VALUES
+(1, 1),
+(2, 2);
 
 -- --------------------------------------------------------
 
@@ -129,6 +176,14 @@ CREATE TABLE IF NOT EXISTS `compositeur_chanson` (
   KEY `FKCom_Art_1_IND` (`Atriste_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Contenu de la table `compositeur_chanson`
+--
+
+INSERT INTO `compositeur_chanson` (`Atriste_ID`, `Chanson_ID`) VALUES
+(1, 5),
+(2, 6);
+
 -- --------------------------------------------------------
 
 --
@@ -142,6 +197,14 @@ CREATE TABLE IF NOT EXISTS `conducteur_album` (
   UNIQUE KEY `ID_Conduit_IND` (`Album_ID`,`Atriste_ID`),
   KEY `FKCon_Art_IND` (`Atriste_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `conducteur_album`
+--
+
+INSERT INTO `conducteur_album` (`Album_ID`, `Atriste_ID`) VALUES
+(1, 1),
+(2, 2);
 
 -- --------------------------------------------------------
 
@@ -180,6 +243,14 @@ CREATE TABLE IF NOT EXISTS `interprete_album` (
   KEY `FKInt_Art_IND` (`Atriste_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Contenu de la table `interprete_album`
+--
+
+INSERT INTO `interprete_album` (`Album_ID`, `Atriste_ID`) VALUES
+(1, 1),
+(2, 2);
+
 -- --------------------------------------------------------
 
 --
@@ -194,6 +265,14 @@ CREATE TABLE IF NOT EXISTS `interprete_chanson` (
   KEY `FKInt_Art_1_IND` (`Atriste_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Contenu de la table `interprete_chanson`
+--
+
+INSERT INTO `interprete_chanson` (`Atriste_ID`, `Chanson_ID`) VALUES
+(1, 5),
+(2, 6);
+
 -- --------------------------------------------------------
 
 --
@@ -205,7 +284,15 @@ CREATE TABLE IF NOT EXISTS `label` (
   `Nom` varchar(50) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`Label_ID`),
   UNIQUE KEY `ID_Label_IND` (`Label_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Contenu de la table `label`
+--
+
+INSERT INTO `label` (`Label_ID`, `Nom`) VALUES
+(1, 'Label1'),
+(2, 'Label2');
 
 -- --------------------------------------------------------
 
@@ -220,6 +307,14 @@ CREATE TABLE IF NOT EXISTS `parolier_chanson` (
   UNIQUE KEY `ID_Ecrit_IND` (`Chanson_ID`,`Atriste_ID`),
   KEY `FKEcr_Art_IND` (`Atriste_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `parolier_chanson`
+--
+
+INSERT INTO `parolier_chanson` (`Atriste_ID`, `Chanson_ID`) VALUES
+(1, 5),
+(2, 6);
 
 -- --------------------------------------------------------
 
