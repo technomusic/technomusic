@@ -1,4 +1,4 @@
-<div class="well bs-component">
+<div class="well bs-component " style="margin-left :300px ; margin-top : 100px ">
     <form class="form-horizontal" enctype="multipart/form-data" action="?" method="post">
         <input type="hidden" name="section" value="insert-movie-exec"/>
         <fieldset>
