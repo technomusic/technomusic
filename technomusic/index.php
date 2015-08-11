@@ -8,7 +8,8 @@ include 'views/header-page-bootsrap.inc.php';
 
 //inclusion du menu
 include 'views/menu-inc.php' ;
-echo "<div>";
+echo "<div >";
+echo "<div class='page-principale'>";
 //on vérifie qui nous appel
 if (isset($_REQUEST["section"])) {
     switch ($_REQUEST["section"]) {
@@ -28,6 +29,6 @@ if (isset($_REQUEST["section"])) {
     include 'views/chanson-liste.inc.php';
 }
 echo "</div>";
-
+echo"</div>";
 include 'views/footer-page-bootsrap.inc.php';
 ?>

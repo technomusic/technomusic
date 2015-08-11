@@ -24,6 +24,14 @@ color: green ;
 font-size:20px ;
 text-align:center ;
 }
+.page-principale{
+    width: 100% ;
+    height:800px ;
+    margin-left: 150px ;
+    background-color: green ;
+    overflow: auto ;
+    
+}
 .footer{
 width:100% ;
 box-shadow:8px 8px 8px #737373 ;
@@ -104,14 +112,27 @@ box-shadow :8px 8px 8px #737373
 
 .men table {
     width : 100% ;
- margin-left : 20px ;
+ margin-left : 5px ;
  padding-top  : 30px ;  
+
+}
+.men tr{
+   border-radius : 10px ;  
 }
 .men td {
     padding : 15px ;
     width : 100px ;
     height : 20px ;
-    border : 1px solid black ;
+    text-align :center ;
+     
+}
+.men-td {
+    ;
+    margin : 5px ;
+    width : 110px ;
+    height : 30px ;
+    border-radius : 20px ;
+    border : 1px inset black ;
 }
 a:link , a:visited{
     color : white ;
