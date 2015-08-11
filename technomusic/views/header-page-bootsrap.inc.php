@@ -34,22 +34,7 @@
 					<li><a href="#">Concours</a></li>
 				  </ul>
 				</li>
-				<li>
-				  <a href="#">Login</a>
-				</li>
-				<li>
-				  <a href="#">Blog</a>
-				</li>
-				<li class="dropdown">
-				  <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Contact / Support<span class="caret"></span></a>
-				  <ul class="dropdown-menu" aria-labelledby="download">
-					<li><a href="#">Rédaction Belgique</a></li>
-					<li><a href="#">Rédaction France</a></li>
-					<li class="divider"></li>
-					<li><a href="#">Suggestions</a></li>
-					<li><a href="#">Réclamations</a></li>
-				  </ul>
-				</li>
+				
 			  </ul>
 
 			 
