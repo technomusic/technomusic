@@ -17,7 +17,7 @@ if (isset($_REQUEST["section"])) {
             include("views/label-liste.inc.php");
             break;
         case "affiche-label-unic":
-            include("views/label-unic.inc.php");
+            include("views/affiche-label-unic.inc.php");
             break;
         case "affiche-chanson-unic":
             include("views/chanson-unic.inc.php");
