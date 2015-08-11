@@ -23,7 +23,7 @@
                 $interprete = $interprete . "<br/>" . $row["nomart"];
             }
             else{
-                echo "<tr><td><a href=\"?section=affiche-chanson-exec&id=" . $id . "\">" . $titre . "</a></td><td>" . $annee . "</td><td>" . $duree . "</td><td>" . $cat ."</td><td>" . $interprete . "</td></tr>";
+                echo "<tr><td><a href=\"?section=affiche-chanson-unic&id=" . $id . "\">" . $titre . "</a></td><td>" . $annee . "</td><td>" . $duree . "</td><td>" . $cat ."</td><td>" . $interprete . "</td></tr>";
                 $id = $row["id"];
                 $titre = $row["titre"];
                 $cat = $row["nomcat"];

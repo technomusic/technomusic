@@ -18,6 +18,9 @@ if (isset($_REQUEST["section"])) {
         case "affiche-label-unic":
             include("views/label-unic.inc.php");
             break;
+        case "affiche-chanson-unic":
+            include("views/chanson-unic.inc.php");
+            break;
     }
 //si personne ne nous a appelé c'est qu'on arrive pour la première fois. On affiche donc la page d'accueil
 } else {
