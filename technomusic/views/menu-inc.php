@@ -6,6 +6,7 @@
         <tr><td><div class ="men-td"><a href="?section=search-movie-form">album</a></td></div></tr>
         <tr><td><div class ="men-td"><a href="?section=search-movie-form">chansons</a></td></div></tr>
         <tr><td><div class ="men-td"><a href="?section=search-movie-form">genre</a></td></div></tr>
+        <tr><td><div class ="men-td"><a href="?section=search-movie-form">label</a></td></div></tr>
     </table>
     </div>
 </div>
