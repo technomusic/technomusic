@@ -42,12 +42,5 @@ if (isset($_REQUEST["section"])) {
     include 'views/liste.inc.php';
 }
 
-
-
-
-
-
-
-
 include 'views/footer-page-bootsrap.inc.php';
 ?>

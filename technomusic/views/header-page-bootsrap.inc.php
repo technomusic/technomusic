@@ -6,20 +6,20 @@
 		<link rel="stylesheet" href="design/bootstrap/css/bootstrap.min.css"/>
 		<!--<link rel="stylesheet" href="design/bootstrap/css/bootstrap-slate.min.css"/>-->
 		<!--<link rel="stylesheet" href="design/bootstrap/css/bootstrap-superhero.min.css"/>-->
-		<link rel="stylesheet" href="styles.css" >
+		<link rel="stylesheet" href="design/css/styles.css" >
 		<link rel="stylesheet" href="design/bootstrap/css/bootstrap-cerulean.min.css"/>
 	</head>
 
-	<body style="padding-top:70px;">
-		<div class="navbar navbar-default navbar-fixed-top">
+	<body>
+		<div class="navbar">
 		  <div class="container">
 		  
-<!--			<div class="navbar">
+			<div class="navbar">
 			  <h2 align="center">TECHNOMUSIC</h2>
 			 
-			</div>-->
+			</div>
 			
-			<!--<div class="navbar-collapse collapse" id="navbar-main" height ="100px">
+			<div class="navbar-collapse collapse" id="navbar-main" height ="100px">
 			  <ul class="nav navbar-nav">
 				<li class="dropdown">
 				  <a class="dropdown-toggle" data-toggle="dropdown" href="?" id="themes">Menu principal <span class="caret"></span></a>
@@ -32,8 +32,8 @@
 					<li><a href="#">Concours</a></li>
 				  </ul>
 				</li>
-				<!--<li>
-				  <a href="#">Aide</a>
+				<li>
+				  <a href="#">Login</a>
 				</li>
 				<li>
 				  <a href="#">Blog</a>
@@ -52,9 +52,9 @@
 
 			 
 
-			</div>-->
-			<div class="recherche">recherche
-			<ul ><liclass="logg">LOGIN : <input class="log"type="text" name="login" width = "50px"></li>
+			</div>
+			<div class="recherche">
+			<ul><li >LOGIN : <input class="log"type="text" name="login" width = "50px"></li>
 			<li>PASSWORD :<input class="log" type="password" name="password" width = "50px" ></li></ul> 
 			
 			

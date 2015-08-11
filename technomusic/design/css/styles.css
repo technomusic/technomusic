@@ -55,25 +55,24 @@ background-image:url("images/image.png") ;
     
 }
 .navbar{
+ 
 margin: 0 auto ;
-color : white ;
-position : float ;
+color : white ; ;
 }
 .navbar h2 {
 color : white ;
 }
 .recherche {
-height : 30px ;
+height : 20px ;
 color : white ; 
-position : float ;
-width : 200px ;
-margin-left : 1000px ;
+position: absolute ;
+top:90px;
+right:10px;
+margin-right : 50px ;
 
 }
-.log {
-width : 100px ;
-height : 15px ;
-}
-.logg {
+.recherche li {
+width : 80px ;
+height : 10px ;
 display : inline ;
 }
