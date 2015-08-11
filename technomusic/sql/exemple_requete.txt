@@ -1,0 +1,1 @@
+SELECT chanson.Chanson_ID, chanson.Titre, chanson.Duree, chanson.Annee, chanson.Description, categorie.Nom, interprete_chanson.Chanson_ID, artiste.Nom FROM chanson JOIN categorie ON chanson.Categorie_ID=categorie.Categorie_ID JOIN interprete_chanson ON chanson.Chanson_ID=interprete_chanson.Chanson_ID JOIN artiste ON interprete_chanson.Atriste_ID=artiste.Atriste_ID
