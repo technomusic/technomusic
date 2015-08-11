@@ -1,3 +1,4 @@
+<div class="col-lg-6">
 <div class="panel panel-primary">
 
 <?php
@@ -36,4 +37,5 @@
     } 
 ?>
 
+</div>
 </div>
