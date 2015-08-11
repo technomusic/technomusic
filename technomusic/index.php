@@ -3,7 +3,7 @@
 include('lib/file.inc.php');
 
 include 'views/header-page-bootsrap.inc.php';
-
+include 'views/menu-inc.php' ; 
 
 
 if (isset($_REQUEST["section"])) {
