@@ -7,7 +7,7 @@ include('lib/file.inc.php');
 include 'views/header-page-bootsrap.inc.php';
 
 //inclusion du menu
-//include 'views/menu-inc.php' ;
+include 'views/menu-inc.php' ;
 
 //on vérifie qui nous appel
 if (isset($_REQUEST["section"])) {
