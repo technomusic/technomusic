@@ -65,6 +65,7 @@ background-image:url("images/image.png") ;
     
 }
 .navbar{
+    height : 100px;
  position : fixed ;
 margin: 0 auto ;
 color : white ; ;
