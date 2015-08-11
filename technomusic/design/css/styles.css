@@ -76,3 +76,27 @@ width : 80px ;
 height : 10px ;
 display : inline ;
 }
+.menu {
+position : fixed ;
+left : 0px  ;
+border-top-right-radius : 20px ;
+border-bottom-right-radius : 20px ;
+width : 150px ;
+height : 720px ;
+background-color: #1995dc ;
+color : white ;
+}
+.menu li{
+    list-style-type:none;
+    margin : 10px 0px ;
+}
+.menu li:before{
+  /* content: "\A4 \ "; caractère ISO 10646 */
+    
+}
+.men{
+ position :absolute ;
+ display : list-item ;
+ padding-top  : 30px ;
+ margin : 0 auto ;    
+}

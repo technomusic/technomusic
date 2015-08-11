@@ -1,29 +1,14 @@
-<div>
+<div class="menu">
+    <div class="men">
     <ul>
-        <li></li>
-        
-        
-        
-        
-        
-        
-        
+        <li><a href="?section=search-movie-form">Recherche</a></li>
+        <li>chanteur</li>
+        <li>album</li>
+        <li>chanson</li>
+        <li>genre</li>
     </ul>
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    </div>
 </div>
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 

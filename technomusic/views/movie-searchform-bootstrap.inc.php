@@ -1,4 +1,4 @@
-<div class="well bs-component">
+<div class="well bs-component" style="margin-left:200px">
     <form class="form-horizontal" enctype="multipart/form-data" method="get">
           <input type="hidden" name="section" value="search-movie-exec"/>
       <fieldset>
