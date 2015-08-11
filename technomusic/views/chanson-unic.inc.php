@@ -10,11 +10,25 @@
         $stmt = $dbh->prepare($sql);
         $stmt->bindValue("id", $_REQUEST["id"]);
         $stmt->execute();
+        $titre;
+        $annee;
+        $id;
+        $duree;
+        $nomcat;
+        $nomart = "";
+        $image;
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
         {
-             echo "<div class=\"panel-heading\"><h3 class=\"panel-title\">" . $row["titre"] . "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp(" . $row["annee"] . ")<a href=\"?section=update-movie-form&id=" . $row["id"] . "\" class=\"btn btn-warning\">Moddifier</a><a href=\"?section=delete-movie-exec&id=" . $row["id"] . "\" class=\"btn btn-danger\">Supprimer</a></h3></div><div class=\"panel-body\"><h3>" . $row["duree"] . "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . $row["nomcat"] ."</h3><div>" . $row["nomart"] . "</div><div><img src=\"data/images/" . $row["image"] . "\"></div></div>";
+            $titre = $row["titre"];
+            $annee = $row["annee"];
+            $id = $row["id"];
+            $duree = $row["duree"];
+            $nomcat = $row["nomcat"];
+            $nomart = $nomart . "<br/>" . $row["nomart"];
+            $image = $row["image"];
         }
         unset($dbh);
+        echo "<div class=\"panel-heading\"><h3 class=\"panel-title\">" . $titre . "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp(" . $annee . ")<a href=\"?section=update-movie-form&id=" . $id . "\" class=\"btn btn-warning\">Moddifier</a><a href=\"?section=delete-movie-exec&id=" . $id . "\" class=\"btn btn-danger\">Supprimer</a></h3></div><div class=\"panel-body\"><h3>" . $duree . " secondes&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . $nomcat ."</h3><div>" . $nomart . "</div><div><img src=\"data/images/" . $image . "\"></div></div>";
     }
     catch(PDOException $e)
     {
