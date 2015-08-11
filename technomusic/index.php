@@ -5,14 +5,11 @@ include('lib/file.inc.php');
 
 //inclusion du header
 include 'views/header-page-bootsrap.inc.php';
-<<<<<<< HEAD
-include 'views/menu-inc.php' ; 
 
-
-=======
+//inclusion du menu
+include 'views/menu-inc.php' ;
 
 //on vérifie qui nous appel
->>>>>>> origin/master
 if (isset($_REQUEST["section"])) {
     switch ($_REQUEST["section"]) {
         case "affiche-movie-exec":
