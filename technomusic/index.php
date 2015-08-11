@@ -6,6 +6,9 @@ include('lib/file.inc.php');
 //inclusion du header
 include 'views/header-page-bootsrap.inc.php';
 
+//inclusion du menu
+include 'views/menu-inc.php' ;
+
 //on vérifie qui nous appel
 if (isset($_REQUEST["section"])) {
     switch ($_REQUEST["section"]) {
