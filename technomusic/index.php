@@ -1,11 +1,18 @@
 <?php
 
+//inclusion de la librairie
 include('lib/file.inc.php');
 
+//inclusion du header
 include 'views/header-page-bootsrap.inc.php';
+<<<<<<< HEAD
 include 'views/menu-inc.php' ; 
 
 
+=======
+
+//on vérifie qui nous appel
+>>>>>>> origin/master
 if (isset($_REQUEST["section"])) {
     switch ($_REQUEST["section"]) {
         case "affiche-movie-exec":
@@ -37,6 +44,7 @@ if (isset($_REQUEST["section"])) {
             include("mods/movies.inc.php");
             break;
     }
+//si personne ne nous a appelé c'est qu'on arrive pour la première fois. On affiche donc la page d'accueil
 } else {
     //include("views/home-page-bootstrap.inc.php");
     include 'views/liste.inc.php';
