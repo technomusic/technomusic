@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 11 Août 2015 à 11:37
+-- Généré le :  Mar 11 Août 2015 à 16:44
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -227,7 +227,15 @@ CREATE TABLE IF NOT EXISTS `image` (
   KEY `FKimage_label_IND` (`Label_ID`),
   KEY `FKimage_chanson_IND` (`Chanson_ID`),
   KEY `FKimage_album_IND` (`Album_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Contenu de la table `image`
+--
+
+INSERT INTO `image` (`Image_ID`, `url`, `Artiste_ID`, `Categorie_ID`, `Label_ID`, `Chanson_ID`, `Album_ID`) VALUES
+(1, '27-07-2015-16-56-33_70ee7dd88fd1845ba53d844243ecf972_Les_minions.jpg.jpg', NULL, NULL, 1, NULL, NULL),
+(2, '27-07-2015-16-56-33_70ee7dd88fd1845ba53d844243ecf972_Les_minions.jpg.jpg', NULL, NULL, 2, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -283,6 +291,7 @@ INSERT INTO `interprete_chanson` (`Artiste_ID`, `Chanson_ID`) VALUES
 CREATE TABLE IF NOT EXISTS `label` (
   `Label_ID` bigint(20) NOT NULL AUTO_INCREMENT,
   `Nom` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `Description` varchar(5000) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`Label_ID`),
   UNIQUE KEY `ID_Label_IND` (`Label_ID`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
@@ -291,9 +300,9 @@ CREATE TABLE IF NOT EXISTS `label` (
 -- Contenu de la table `label`
 --
 
-INSERT INTO `label` (`Label_ID`, `Nom`) VALUES
-(1, 'Label1'),
-(2, 'Label2');
+INSERT INTO `label` (`Label_ID`, `Nom`, `Description`) VALUES
+(1, 'Label1', 'Label intergalactique confirmant à l''unanimité que l''album est une bombe atomique universelle.'),
+(2, 'Label2', 'Ce label relate la médiocrité votée par tous les habitants du Groeland. Il faut savoir, au passage, que ces derniers composent de la musique en frappant des blocs de glaces les uns contres les autres.');
 
 -- --------------------------------------------------------
 
