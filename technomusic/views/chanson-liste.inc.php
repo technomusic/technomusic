@@ -32,7 +32,7 @@
                 $duree = $row["duree"];
             }   
         }
-        echo "<tr><td><a href=\"?section=affiche-chanson-exec&id=" . $id . "\">" . $titre . "</a></td><td>" . $annee . "</td><td>" . $duree . "</td><td>" . $cat ."</td><td>" . $interprete . "</td></tr></tbody>";
+        echo "<tr><td><a href=\"?section=affiche-chanson-unic&id=" . $id . "\">" . $titre . "</a></td><td>" . $annee . "</td><td>" . $duree . "</td><td>" . $cat ."</td><td>" . $interprete . "</td></tr></tbody>";
         unset($dbh);
     }
     catch(PDOException $e)
