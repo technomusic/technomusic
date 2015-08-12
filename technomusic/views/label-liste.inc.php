@@ -3,7 +3,7 @@
         
 
 <?php
-
+echo "<thead><tr><th>Nom</th></tr></thead><tbody>";
     try
     {
         $dbh = new PDO("mysql:host=$hostname;dbname=$dbname",   $username, $password);
