@@ -26,7 +26,7 @@ if (isset($_REQUEST["section"])) {
 //si personne ne nous a appelé c'est qu'on arrive pour la première fois. On affiche donc la page d'accueil
 } else {
     //include("views/home-page-bootstrap.inc.php");
-    include 'views/chanson-liste.inc.php';
+    //include 'views/chanson-liste.inc.php';
 }
 echo "</div>";
 echo"</div>";

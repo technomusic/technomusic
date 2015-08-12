@@ -2,11 +2,11 @@
     <div class="men">
         <table>
         <tr><td><div class ="men-td"><a href="?section=search-movie-form">Recherche</a></div></td></tr>
-        <tr><td><div class ="men-td"><a href="?section=search-movie-form">chanteur</a></td></div></tr>
-        <tr><td><div class ="men-td"><a href="?section=search-movie-form">album</a></td></div></tr>
-        <tr><td><div class ="men-td"><a href="?section=search-movie-form">chansons</a></td></div></tr>
-        <tr><td><div class ="men-td"><a href="?section=search-movie-form">genre</a></td></div></tr>
-        <tr><td><div class ="men-td"><a href="?section=search-movie-form">label</a></td></div></tr>
+        <tr><td><div class ="men-td"><a href="views/chanteur-liste.inc.php">chanteur</a></td></div></tr>
+        <tr><td><div class ="men-td"><a href="views/album-liste.inc.php">album</a></td></div></tr>
+        <tr><td><div class ="men-td"><a href="views/chanson-liste.inc.php">chansons</a></td></div></tr>
+        <tr><td><div class ="men-td"><a href="views/genre-liste.inc.php">genre</a></td></div></tr>
+        <tr><td><div class ="men-td"><a href="views/label-liste.inc.php">label</a></td></div></tr>
     </table>
     </div>
 </div>
