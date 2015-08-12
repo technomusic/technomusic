@@ -42,10 +42,10 @@
 			</div>-->
 			<div class="login">
                         <table>
-                            <tr><td >LOGIN : <input class="log"type="text" name="login" width = "50px"></td></tr>
-			<tr><td>PASSWORD :<input class="log" type="password" name="password" width = "50px" ></td></tr> 
-			<tr><td><input class="log" type="submit" name="connection" value = "connection"width = "50px" ></td></tr>
-			
+                            <tr colspan="2"><td >LOGIN : <input class="log1"type="text" name="login" width = "50px"></td></tr>
+			<tr colspan="2"><td>PASSWORD :<input class="log1" type="password" name="password" width = "50px" ></td></tr> 
+			<tr><td><input class="log" type="submit" name="connection" value = "connection"width = "50px" ></td>
+			<td><input class="log" type="submit" name="inscription" value = "inscription"width = "50px" ></td></tr>
 			
 			</table>
 			</div>
