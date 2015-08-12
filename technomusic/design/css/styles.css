@@ -75,6 +75,9 @@ color : white ; ;
 .navbar1 h2 {
 color : white ;
 }
+.navbar h2:hover {
+    text-shadow : 5px 5px 5px black ;
+}
 .navbar a:link {
     text-decoration: none ;
 }
