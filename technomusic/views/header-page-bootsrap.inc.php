@@ -12,12 +12,12 @@
                 <script type="text/javascript" src="newjavascript.js"></script>
 	</head>
 
-	<body>
+	<body class="body">
 		<div class="navbar">
 		  <div class="container">
 		  
 			<div class="navbar">
-			  <h2 align="center">TECHNOMUSIC</h2>
+                            <a href = "index.php"><h2 align="center">TECHNOMUSIC</h2></a>
 			 
 			</div>
 			
