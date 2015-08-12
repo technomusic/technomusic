@@ -33,9 +33,11 @@ text-align:center ;
 .page-principale{
     width: 80% ;
     height:725px ;
-    margin : 0 auto  ;
-    overflow: auto ;
-    
+    margin-left : 250px  ;
+    overflow: auto ;    
+}
+table.table.table-striped.table-hover{
+    background-color: white ;
 }
 .footer{
 width:100% ;
@@ -102,16 +104,16 @@ background-color: #1995dc ;
 color : white ;
 box-shadow : 8px 8px 8px #737373 ;
 
+
 }
-.menu li{
-    margin : 10px 0px ;
-}
+
+
 .men {
-    width : 100px ;
-    height : 300px ;
-  position : absolute ;
-  margin-top : 30px ;
-  border-radius : 20px ;
+    width : 150px ;
+    height : 420px ;
+  position : relative ;
+  margin-top : 150px ;
+ vertical-align : middle ;
   
     
 }
@@ -119,7 +121,8 @@ box-shadow : 8px 8px 8px #737373 ;
 .men table {
     width : 100% ;
  margin-left : 5px ;
- padding-top  : 30px ;  
+ padding-top  : 30px ;
+ 
 
 }
 .men tr{

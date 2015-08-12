@@ -1,6 +1,6 @@
 <div class="menu" name="menu">
     <div class="men">
-        <table>
+        <table class ="tab-menu">
         <tr><td><a href="?section=search-movie-form"><div class ="men-td">Recherche</div></a></td></tr>
         <tr><td><a href="?section=affiche-chanteur-liste"><div class ="men-td">chanteur</div></a></td></tr>
         <tr><td><a href="?section=affiche-album-liste"><div class ="men-td">album</div></a></td></tr>
@@ -10,18 +10,5 @@
     </table>
     </div>
 </div>
-<script>
-var positionElementInPage = $('menu').offset().top;
-$(window).scroll(
-function() {
-if ($(window).scrollTop() &gt;= positionElementInPage) {
-// fixed
-$('menu').addClass("floatable");
-} else {
-// relative
-$('menu').removeClass("floatable");
-}
-}
-)
-</script>
+
 
