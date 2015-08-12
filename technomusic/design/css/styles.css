@@ -23,13 +23,13 @@ background-color:#001076 ;
 border-radius: 20px ;
 box-shadow:8px 8px 5px 3px #737373 ;
 }
-.tab1 tr td {
+/*.tab1 tr td {
 border: 3px solid black ;
 height:40 ;
 color: green ;
 font-size:20px ;
 text-align:center ;
-}
+}*/
 .page-principale{
     width: 80% ;
     height:725px ;
@@ -63,33 +63,34 @@ margin-left : 200px ;
 color : white ;
 
 }
-.navbar{
-    height : 100px;
+.navbar {
+    height : 80px ;
+}
+.navbar1{
+width : 400px ;
  position : relative ;
 margin: 0 auto ;
 color : white ; ;
 }
-.navbar h2 {
+.navbar1 h2 {
 color : white ;
 }
 .login {
-    font-size : 10px ;
+font-size : 8px ;
 height : 50px ;
 color : white ; 
 position: absolute ;
 top:10px;
-right:10px;
-margin-right : 0px ;
-
+right : 20px ;
 }
-.login td {
+.tab1 td {
 width : 80px ;
 height : 8px ;
 
 }
 .log {
     color : black ;
-    width : 60px ;
+  
 }
 .menu {
 position : fixed ;

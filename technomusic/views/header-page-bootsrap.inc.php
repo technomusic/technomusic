@@ -16,7 +16,7 @@
 		<div class="navbar">
 		  <div class="container">
 		  
-			<div class="navbar">
+			<div class="navbar1">
                             <a href = "index.php"><h2 align="center">TECHNOMUSIC</h2></a>
 			 
 			</div>
@@ -40,15 +40,22 @@
 			 
 
 			</div>-->
-			<div class="login">
-                        <table>
-                            <tr colspan="2"><td >LOGIN : <input class="log1"type="text" name="login" width = "50px"></td></tr>
-			<tr colspan="2"><td>PASSWORD :<input class="log1" type="password" name="password" width = "50px" ></td></tr> 
-			<tr><td><input class="log" type="submit" name="connection" value = "connection"width = "50px" ></td>
-			<td><input class="log" type="submit" name="inscription" value = "inscription"width = "50px" ></td></tr>
-			
-			</table>
+                    <div class="login">
+                        <div class="tab1">
+                            <table>
+                                <tr><td >LOGIN : <input class="log1"type="text" name="login" ></td>
+                                <td>PASSWORD :<input class="log1" type="password" name="password"  ></td></tr>
+                            </table>
+                        </div><br>
+                        <div class="tab2">
+                        
+                            <table>
+                                <tr><td><input class="log" type="submit" name="connection" value = "connection"width = "50px" ></td>
+                                <td><input class="log" type="submit" name="inscription" value = "inscription"width = "50px" ></td></tr>
+                            
+                            </table>
 			</div>
+                    </div>
 		  </div>
 		</div>
 		<!---->
