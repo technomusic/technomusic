@@ -22,11 +22,14 @@ if (isset($_REQUEST["section"])) {
         case "affiche-chanson-unic":
             include("views/chanson-unic.inc.php");
             break;
+        case "affiche-chanson-liste":
+            include 'views/chanson-liste.inc.php';
+            break;
     }
 //si personne ne nous a appelé c'est qu'on arrive pour la première fois. On affiche donc la page d'accueil
 } else {
     //include("views/home-page-bootstrap.inc.php");
-    //include 'views/chanson-liste.inc.php';
+    include 'views/chanson-liste.inc.php';
 }
 echo "</div>";
 echo"</div>";

@@ -21,7 +21,7 @@
 			 
 			</div>
 			
-			<div class="navbar-collapse collapse" id="navbar-main" height ="100px">
+			<!--<div class="navbar-collapse collapse" id="navbar-main" height ="100px">
 			  <ul class="nav navbar-nav">
 				<li class="dropdown">
 				  <a class="dropdown-toggle" data-toggle="dropdown" href="?" id="themes">Menu principal <span class="caret"></span></a>
@@ -39,7 +39,7 @@
 
 			 
 
-			</div>
+			</div>-->
 			<div class="login">
                         <table>
                             <tr><td >LOGIN : <input class="log"type="text" name="login" width = "50px"></td></tr>
