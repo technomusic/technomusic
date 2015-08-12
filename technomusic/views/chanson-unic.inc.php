@@ -11,13 +11,15 @@
         $stmt = $dbh->prepare($sql);
         $stmt->bindValue("id", $_REQUEST["id"]);
         $stmt->execute();
+        
         $titre;
         $annee;
         $id;
         $duree;
         $nomcat;
-        $nomart = "";
         $image;
+        $nomart = "";
+        
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
         {
             $titre = $row["titre"];

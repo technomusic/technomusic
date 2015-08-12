@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 11 Août 2015 à 16:44
+-- Généré le :  Mer 12 Août 2015 à 09:33
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -227,7 +227,7 @@ CREATE TABLE IF NOT EXISTS `image` (
   KEY `FKimage_label_IND` (`Label_ID`),
   KEY `FKimage_chanson_IND` (`Chanson_ID`),
   KEY `FKimage_album_IND` (`Album_ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Contenu de la table `image`
@@ -235,7 +235,15 @@ CREATE TABLE IF NOT EXISTS `image` (
 
 INSERT INTO `image` (`Image_ID`, `url`, `Artiste_ID`, `Categorie_ID`, `Label_ID`, `Chanson_ID`, `Album_ID`) VALUES
 (1, '27-07-2015-16-56-33_70ee7dd88fd1845ba53d844243ecf972_Les_minions.jpg.jpg', NULL, NULL, 1, NULL, NULL),
-(2, '27-07-2015-16-56-33_70ee7dd88fd1845ba53d844243ecf972_Les_minions.jpg.jpg', NULL, NULL, 2, NULL, NULL);
+(2, '27-07-2015-16-56-33_70ee7dd88fd1845ba53d844243ecf972_Les_minions.jpg.jpg', NULL, NULL, 2, NULL, NULL),
+(3, '27-07-2015-16-56-33_70ee7dd88fd1845ba53d844243ecf972_Les_minions.jpg.jpg', 1, NULL, NULL, NULL, NULL),
+(4, '27-07-2015-16-56-33_70ee7dd88fd1845ba53d844243ecf972_Les_minions.jpg.jpg', 2, NULL, NULL, NULL, NULL),
+(5, '27-07-2015-16-56-33_70ee7dd88fd1845ba53d844243ecf972_Les_minions.jpg.jpg', NULL, 1, NULL, NULL, NULL),
+(6, '27-07-2015-16-56-33_70ee7dd88fd1845ba53d844243ecf972_Les_minions.jpg.jpg', NULL, 2, NULL, NULL, NULL),
+(7, '27-07-2015-16-56-33_70ee7dd88fd1845ba53d844243ecf972_Les_minions.jpg.jpg', NULL, NULL, NULL, 5, NULL),
+(8, '27-07-2015-16-56-33_70ee7dd88fd1845ba53d844243ecf972_Les_minions.jpg.jpg', NULL, NULL, NULL, 6, NULL),
+(9, '27-07-2015-16-56-33_70ee7dd88fd1845ba53d844243ecf972_Les_minions.jpg.jpg', NULL, NULL, NULL, NULL, 1),
+(10, '27-07-2015-16-56-33_70ee7dd88fd1845ba53d844243ecf972_Les_minions.jpg.jpg', NULL, NULL, NULL, NULL, 2);
 
 -- --------------------------------------------------------
 
