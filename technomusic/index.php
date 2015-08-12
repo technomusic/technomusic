@@ -28,6 +28,9 @@ if (isset($_REQUEST["section"])) {
         case "affiche-categorie-liste":
             include("views/categorie-liste.inc.php");
             break;
+        case "affiche-album-liste":
+            include("views/album-liste.inc.php");
+            break;
     }
 //si personne ne nous a appelé c'est qu'on arrive pour la première fois. On affiche donc la page d'accueil
 } else {
