@@ -1,6 +1,6 @@
 .body {
   background-color: #55EAF4 ;
-  opacity : 05 ;
+
 }
 
 
@@ -31,7 +31,7 @@ font-size:20px ;
 text-align:center ;
 }
 .page-principale{
-    width: 100% ;
+    width: 90% ;
     height:725px ;
     margin-left: 160px ;
     overflow: auto ;
@@ -69,7 +69,7 @@ background-image:url("images/image.png") ;
 }
 .navbar{
     height : 100px;
- position : fixed ;
+ position : relative ;
 margin: 0 auto ;
 color : white ; ;
 }
@@ -141,18 +141,20 @@ box-shadow : 8px 8px 8px #737373 ;
     border-radius : 20px ;
     border : 1px inset black ;
     background-color: #033769 ;
+    color:white ;
 }
 .men-td:hover {
     background-color: #5A8487 ;
     color:white ;
+    border : inset ;
     
 }
 
-a:link , a:visited{
+.men-td a:link , .men-td a:visited{
    
     color : white ;
     cursor : auto ;
 }
-a:link:active, a:visited:active { 
+.men-td a:link:active, .men-td a:visited:active { 
     color: white ;
 }
