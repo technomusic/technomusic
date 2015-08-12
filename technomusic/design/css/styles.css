@@ -144,8 +144,10 @@ box-shadow : 8px 8px 8px #737373 ;
 }
 .men-td:hover {
     background-color: #5A8487 ;
+    color:white ;
     
 }
+
 a:link , a:visited{
    
     color : white ;
