@@ -23,7 +23,10 @@ if (isset($_REQUEST["section"])) {
             include("views/chanson-unic.inc.php");
             break;
         case "affiche-chanson-liste":
-            include 'views/chanson-liste.inc.php';
+            include("views/chanson-liste.inc.php");
+            break;
+        case "affiche-categorie-liste":
+            include("views/categorie-liste.inc.php");
             break;
     }
 //si personne ne nous a appelé c'est qu'on arrive pour la première fois. On affiche donc la page d'accueil
