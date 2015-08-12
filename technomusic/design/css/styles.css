@@ -30,16 +30,13 @@ color: green ;
 font-size:20px ;
 text-align:center ;
 }
-/*.page-principale{
+.page-principale{
     width: 100% ;
     height:725px ;
     margin-left: 160px ;
-    background-color: #1d9ce5 ;
     overflow: auto ;
-    border-radius : 20px ;
-    opacity : 0.3 ;
     
-}*/
+}
 .footer{
 width:100% ;
 box-shadow:8px 8px 8px #737373 ;
@@ -145,7 +142,12 @@ box-shadow : 8px 8px 8px #737373 ;
     border : 1px inset black ;
     background-color: #033769 ;
 }
+.men-td:hover {
+    background-color: #5A8487 ;
+    
+}
 a:link , a:visited{
+   
     color : white ;
     cursor : auto ;
 }
