@@ -44,7 +44,7 @@
                         <table>
                             <tr><td >LOGIN : <input class="log"type="text" name="login" width = "50px"></td></tr>
 			<tr><td>PASSWORD :<input class="log" type="password" name="password" width = "50px" ></td></tr> 
-			
+			<tr><td><input class="log" type="submit" name="connection" value = "connection"width = "50px" ></td></tr>
 			
 			
 			</table>
