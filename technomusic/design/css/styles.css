@@ -47,7 +47,7 @@ table.table.table-striped.table-hover thead{
 .footer{
 width:100% ;
 box-shadow:8px 8px 8px #737373 ;
-height: 60px;
+height: 30px;
 background-color: #1995dc ;
 position: fixed;
 bottom : 0px ;
@@ -58,11 +58,14 @@ color:white ;
 
 .contact {
 width : 200px ;
-height : 30px ;
+height : 60px ;
 margin-left : 200px ;
 color : white ;
-
 }
+.plan {
+    width:100px ;
+}
+
 .navbar {
     height : 80px ;
 }
@@ -95,7 +98,14 @@ height : 8px ;
 
 }
 .log {
-    color : black ;
+    color : white ;
+    background-color: #033769 ;
+    border-radius : 10px ;
+    margin-right: 10px ;
+    height : 20px ;
+    width : 80px ;
+    font-size:10px ;
+    
   
 }
 .menu {
