@@ -7,7 +7,7 @@ include('lib/file.inc.php');
 include 'views/header-page-bootsrap.inc.php';
 
 //inclusion du menu
-include 'views/menu-inc.php' ;
+include 'views/menu-inc.php';
 echo "<div >";
 echo "<div class='page-principale'>";
 //on vérifie qui nous appel
@@ -15,10 +15,10 @@ if (isset($_REQUEST["section"])) {
     switch ($_REQUEST["section"]) {
         case "login" :
             include "views/inscription-inc.php";
-            break ;
+            break;
         case"inscription-exec":
             include"views/recup-inscript.php";
-            break ;
+            break;
         case "affiche-label-liste":
             include("views/label-liste.inc.php");
             break;
@@ -46,7 +46,6 @@ if (isset($_REQUEST["section"])) {
         case "affiche-artiste-unic":
             include("views/artiste-unic.inc.php");
             break;
-
     }
 //si personne ne nous a appelé c'est qu'on arrive pour la première fois. On affiche donc la page d'accueil
 } else {

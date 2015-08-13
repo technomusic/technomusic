@@ -27,7 +27,7 @@
                     $interprete[] = $row["nominter"];
                     $compositeur[] = $row["nomcompo"];
                     $conducteur[] = $row["nomconduct"];
-                //quand ce n'est plus le même id...
+                    //quand ce n'est plus le même id...
                 } else {
                     //... on élimine les doublons interprete...
                     $result = array_unique($interprete);
@@ -72,10 +72,10 @@
                         $txtconducteur = $txtconducteur . "<br/>" . $tab[$i];
                     }
                     $conducteur = array();
-                    
-                    
-                    
-                    
+
+
+
+
                     //...ensuite on affiche la ligne de la table...
                     echo "<tr><td><a href=\"?section=affiche-album-unic&id=" . $id . "\">" . $titre . "</a></td><td>" . $annee . "</td><td>" . $txtinterprete . "</td><td>" . $txtcompositeur . "</td><td>" . $txtconducteur . "</td><td>" . $label . "</td></tr>";
                     //...puis on réinitialise toutes les variables pour le prochain tour
@@ -129,8 +129,8 @@
                 $txtconducteur = $txtconducteur . "<br/>" . $tab[$i];
             }
             $conducteur = array();
-            
-            
+
+
             echo "<tr><td><a href=\"?section=affiche-album-unic&id=" . $id . "\">" . $titre . "</a></td><td>" . $annee . "</td><td>" . $txtinterprete . "</td><td>" . $txtcompositeur . "</td><td>" . $txtconducteur . "</td><td>" . $label . "</td></tr>";
             unset($dbh);
         } catch (PDOException $e) {

@@ -13,10 +13,10 @@ and open the template in the editor.
     </head>
     <body>
         <div class="acceui">
-                    <div class="actu1"><div class="actu1-1">http://www.lesinrocks.com/inrocks.tv/aap-rocky-un-clip-retro-pour-jukebox-joints/</div><div class=actu1-2>
-                Après le clip hallucinogène de L$D, A$AP Rocky est de retour avec Jukebox Joints, morceau issu de son album At.Long.Last
-                .A$AP sorti en juin dernier. Si les stupéfiants sont toujours au programme, la vidéo commence cette...
-                        </div></div>
+            <div class="actu1"><div class="actu1-1">http://www.lesinrocks.com/inrocks.tv/aap-rocky-un-clip-retro-pour-jukebox-joints/</div><div class=actu1-2>
+                    Après le clip hallucinogène de L$D, A$AP Rocky est de retour avec Jukebox Joints, morceau issu de son album At.Long.Last
+                    .A$AP sorti en juin dernier. Si les stupéfiants sont toujours au programme, la vidéo commence cette...
+                </div></div>
             <div class="actu2"></div>
             <div class="actu3"></div>
             <div class="actu4"></div>
