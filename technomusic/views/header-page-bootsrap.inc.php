@@ -41,7 +41,9 @@
 
 			</div>-->
                     <div class="login">
-                        <div class="tab1">
+                        
+                            <form action="" method=""post name="log-site">
+                                <div class="tab1">
                             <table>
                                 <tr><td >LOGIN : <input class="log1"type="text" name="login" ></td>
                                 <td>PASSWORD :<input class="log1" type="password" name="password"  ></td></tr>
@@ -51,10 +53,11 @@
                         
                             <table>
                                 <tr><td><input class="log" type="submit" name="connection" value = "connection"width = "50px" ></td>
-                                <td><input class="log" type="submit" name="inscription" value = "inscription"width = "50px" ></td></tr>
+                                    <td><a href="views/inscription-inc.php"><input class="log" type="buttont" name="inscription" value = "inscription" width = "50px" ></a></td></tr>
                             
                             </table>
 			</div>
+                            </form>
                     </div>
 		  </div>
 		</div>

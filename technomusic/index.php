@@ -13,6 +13,7 @@ echo "<div class='page-principale'>";
 //on vérifie qui nous appel
 if (isset($_REQUEST["section"])) {
     switch ($_REQUEST["section"]) {
+        
         case "affiche-label-liste":
             include("views/label-liste.inc.php");
             break;
