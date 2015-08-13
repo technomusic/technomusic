@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 12 Août 2015 à 09:33
+-- Généré le :  Jeu 13 Août 2015 à 09:05
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `album` (
 --
 
 INSERT INTO `album` (`Album_ID`, `Titre`, `Annee`, `Label_ID`) VALUES
-(1, 'album1', 2015, 1),
+(1, 'album1', 2014, 1),
 (2, 'album2', 2015, 2);
 
 -- --------------------------------------------------------
@@ -60,15 +60,21 @@ CREATE TABLE IF NOT EXISTS `artiste` (
   `Bio` varchar(10000) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`Artiste_ID`),
   UNIQUE KEY `ID_Artiste_IND` (`Artiste_ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Contenu de la table `artiste`
 --
 
 INSERT INTO `artiste` (`Artiste_ID`, `Nom`, `Prenom`, `Surnom`, `Date_Naissance`, `Lieu_Naissance`, `Bio`) VALUES
-(1, 'artiste1', 'artiste1b', NULL, NULL, NULL, NULL),
-(2, 'artiste2', 'artiste2b', NULL, NULL, NULL, NULL);
+(1, 'interprete1', 'interprete1', NULL, NULL, NULL, NULL),
+(2, 'interprete2', 'interprete2', NULL, NULL, NULL, NULL),
+(3, 'compositeur1', 'compositeur1', NULL, NULL, NULL, NULL),
+(4, 'compositeur2', 'compositeur2', NULL, NULL, NULL, NULL),
+(5, 'parolier1', 'parolier1', NULL, NULL, NULL, NULL),
+(6, 'parolier2', 'parolier2', NULL, NULL, NULL, NULL),
+(7, 'conducteur1', 'conducteur1', NULL, NULL, NULL, NULL),
+(8, 'conducteur2', 'conducteur2', NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -115,7 +121,7 @@ CREATE TABLE IF NOT EXISTS `chanson` (
 
 INSERT INTO `chanson` (`Chanson_ID`, `Titre`, `Duree`, `Annee`, `Description`, `Categorie_ID`) VALUES
 (5, 'chanson1', 125, 2014, 'test1', 1),
-(6, 'chanson1', 126, 2015, 'test2', 2);
+(6, 'chanson2', 126, 2015, 'test2', 2);
 
 -- --------------------------------------------------------
 
@@ -159,8 +165,9 @@ CREATE TABLE IF NOT EXISTS `compositeur_album` (
 --
 
 INSERT INTO `compositeur_album` (`Album_ID`, `Artiste_ID`) VALUES
-(1, 1),
-(2, 2);
+(1, 3),
+(1, 4),
+(2, 4);
 
 -- --------------------------------------------------------
 
@@ -203,8 +210,9 @@ CREATE TABLE IF NOT EXISTS `conducteur_album` (
 --
 
 INSERT INTO `conducteur_album` (`Album_ID`, `Artiste_ID`) VALUES
-(1, 1),
-(2, 2);
+(1, 7),
+(1, 8),
+(2, 8);
 
 -- --------------------------------------------------------
 
@@ -265,6 +273,7 @@ CREATE TABLE IF NOT EXISTS `interprete_album` (
 
 INSERT INTO `interprete_album` (`Album_ID`, `Artiste_ID`) VALUES
 (1, 1),
+(1, 2),
 (2, 2);
 
 -- --------------------------------------------------------
@@ -342,13 +351,23 @@ INSERT INTO `parolier_chanson` (`Artiste_ID`, `Chanson_ID`) VALUES
 
 CREATE TABLE IF NOT EXISTS `utilisateur` (
   `Utilisateur_ID` bigint(20) NOT NULL AUTO_INCREMENT,
-  `Nom` varchar(50) CHARACTER SET utf8 NOT NULL,
-  `Prenom` varchar(50) CHARACTER SET utf8 NOT NULL,
   `Pseudo` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `Nom` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `Prenom` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
   `Password` varchar(500) CHARACTER SET utf8 NOT NULL,
+  `Statut` enum('inscrit','admin') CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`Utilisateur_ID`),
-  UNIQUE KEY `ID_Utilisateur_IND` (`Utilisateur_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  UNIQUE KEY `ID_Utilisateur_IND` (`Utilisateur_ID`),
+  UNIQUE KEY `Pseudo` (`Pseudo`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Contenu de la table `utilisateur`
+--
+
+INSERT INTO `utilisateur` (`Utilisateur_ID`, `Pseudo`, `Nom`, `Prenom`, `Password`, `Statut`) VALUES
+(1, 'admin', NULL, NULL, 'admin', 'admin'),
+(2, 'user', NULL, NULL, 'user', 'inscrit');
 
 --
 -- Contraintes pour les tables exportées
