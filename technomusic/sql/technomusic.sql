@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 13 Août 2015 à 09:05
+-- Généré le :  Jeu 13 Août 2015 à 15:50
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS `artiste` (
 --
 
 INSERT INTO `artiste` (`Artiste_ID`, `Nom`, `Prenom`, `Surnom`, `Date_Naissance`, `Lieu_Naissance`, `Bio`) VALUES
-(1, 'interprete1', 'interprete1', NULL, NULL, NULL, NULL),
+(1, 'interprete1', 'interprete1', 'PLOP', '1988-12-28', 'Charleroi', 'Bio'),
 (2, 'interprete2', 'interprete2', NULL, NULL, NULL, NULL),
 (3, 'compositeur1', 'compositeur1', NULL, NULL, NULL, NULL),
 (4, 'compositeur2', 'compositeur2', NULL, NULL, NULL, NULL),
@@ -113,7 +113,7 @@ CREATE TABLE IF NOT EXISTS `chanson` (
   PRIMARY KEY (`Chanson_ID`),
   UNIQUE KEY `ID_Chanson_IND` (`Chanson_ID`),
   KEY `FKappartient_IND` (`Categorie_ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Contenu de la table `chanson`
@@ -121,7 +121,9 @@ CREATE TABLE IF NOT EXISTS `chanson` (
 
 INSERT INTO `chanson` (`Chanson_ID`, `Titre`, `Duree`, `Annee`, `Description`, `Categorie_ID`) VALUES
 (5, 'chanson1', 125, 2014, 'test1', 1),
-(6, 'chanson2', 126, 2015, 'test2', 2);
+(6, 'chanson2', 126, 2015, 'test2', 2),
+(7, 'chanson3', NULL, NULL, NULL, 1),
+(8, 'chanson4', NULL, NULL, NULL, 2);
 
 -- --------------------------------------------------------
 
@@ -144,6 +146,8 @@ CREATE TABLE IF NOT EXISTS `chanson_album` (
 
 INSERT INTO `chanson_album` (`Album_ID`, `Chanson_ID`, `Num_piste`) VALUES
 (1, 5, 1),
+(1, 7, 0),
+(1, 8, 0),
 (2, 6, 2);
 
 -- --------------------------------------------------------
@@ -235,7 +239,7 @@ CREATE TABLE IF NOT EXISTS `image` (
   KEY `FKimage_label_IND` (`Label_ID`),
   KEY `FKimage_chanson_IND` (`Chanson_ID`),
   KEY `FKimage_album_IND` (`Album_ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
 
 --
 -- Contenu de la table `image`
@@ -251,7 +255,13 @@ INSERT INTO `image` (`Image_ID`, `url`, `Artiste_ID`, `Categorie_ID`, `Label_ID`
 (7, '27-07-2015-16-56-33_70ee7dd88fd1845ba53d844243ecf972_Les_minions.jpg.jpg', NULL, NULL, NULL, 5, NULL),
 (8, '27-07-2015-16-56-33_70ee7dd88fd1845ba53d844243ecf972_Les_minions.jpg.jpg', NULL, NULL, NULL, 6, NULL),
 (9, '27-07-2015-16-56-33_70ee7dd88fd1845ba53d844243ecf972_Les_minions.jpg.jpg', NULL, NULL, NULL, NULL, 1),
-(10, '27-07-2015-16-56-33_70ee7dd88fd1845ba53d844243ecf972_Les_minions.jpg.jpg', NULL, NULL, NULL, NULL, 2);
+(10, '27-07-2015-16-56-33_70ee7dd88fd1845ba53d844243ecf972_Les_minions.jpg.jpg', NULL, NULL, NULL, NULL, 2),
+(11, '27-07-2015-16-56-33_70ee7dd88fd1845ba53d844243ecf972_Les_minions.jpg.jpg', 3, NULL, NULL, NULL, NULL),
+(12, '27-07-2015-16-56-33_70ee7dd88fd1845ba53d844243ecf972_Les_minions.jpg.jpg', 4, NULL, NULL, NULL, NULL),
+(13, '27-07-2015-16-56-33_70ee7dd88fd1845ba53d844243ecf972_Les_minions.jpg.jpg', 5, NULL, NULL, NULL, NULL),
+(14, '27-07-2015-16-56-33_70ee7dd88fd1845ba53d844243ecf972_Les_minions.jpg.jpg', 6, NULL, NULL, NULL, NULL),
+(15, '27-07-2015-16-56-33_70ee7dd88fd1845ba53d844243ecf972_Les_minions.jpg.jpg', 7, NULL, NULL, NULL, NULL),
+(16, '27-07-2015-16-56-33_70ee7dd88fd1845ba53d844243ecf972_Les_minions.jpg.jpg', 8, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -355,11 +365,11 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `Nom` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
   `Prenom` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
   `Password` varchar(500) CHARACTER SET utf8 NOT NULL,
-  `Statut` enum('inscrit','admin') CHARACTER SET utf8 NOT NULL,
+  `Statut` enum('inscrit','admin') CHARACTER SET utf8 NOT NULL DEFAULT 'inscrit',
   PRIMARY KEY (`Utilisateur_ID`),
   UNIQUE KEY `ID_Utilisateur_IND` (`Utilisateur_ID`),
   UNIQUE KEY `Pseudo` (`Pseudo`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Contenu de la table `utilisateur`
