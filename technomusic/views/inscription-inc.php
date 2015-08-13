@@ -1,33 +1,46 @@
-<form action="?" mehod="post" name='inscription'>
- <h2>bienvenu sur le site TECHNOMUSIC </h2><br>
- <h3>veuillez vous inscrire pour acceder au site </h3><br>
-        <p>remplissez tous les champs sans quoi l'inscription ne pourra se faire </p>
-<table>
-        <tr>
-            <td>Nom : </td>
-            <td><input type='text' name='nom' ></td>
-        </tr>
-        <tr>
-            <td>Prenom : </td>
-            <td><input type='text' name='prenom' ></td>
-        </tr>
-        <tr>
-            <td>Pseudo : </td>
-            <td><input type='text' name='pseudo' ></td>
-        </tr>
-        <tr>
-            <td>Password : </td>
-            <td><input type='password' name='password' ></td>
-        </tr>
-        <tr>
-            <td>Retapper le password :</td>
-            <td><input type='password' name='password1' ></td>
-        </tr>
-        <tr>
-            <td><input type='submit' name='submit' value="envoyer" ></td>
-        </tr>
-</table>
-        
-</form>
-        
+<div class="well bs-component">
+    <form class="form-horizontal" enctype="multipart/form-data" action="?" method="post" name="inscription">
+        <input type="hidden" name="section" value="inscription-exec"/>
+        <fieldset>
+          <legend>inscription au site</legend>
+          <div class="form-group">
+            <label class="control-label">Nom</label>
+            <div class="col-lg-10">
+              <input class="form-control" name="nom" placeholder="Entrez un nom" type="text">
+            </div>
+          </div> 
+          <div class="form-group">
+            <label class="control-label">Prenom</label>
+            <div class="col-lg-10">
+              <input class="form-control" name="prenom" placeholder="Entrez un prenom" type="text">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Pseudo</label>
+            <div class="col-lg-10">
+              <input class="form-control" name="pseudo" placeholder="Entrez un pseudo" type="text">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Mot de passe</label>
+            <div class="col-lg-10">
+              <input class="form-control"  name="password" placeholder="Entrez un mot de passe" type="text">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Mot de passe</label>
+            <div class="col-lg-10">
+              <input class="form-control" name="password1" placeholder="réintroduisez le mot de passe" type="text">
+            </div>
+          </div>
+         
+           <div class="form-group">
+          <div class="col-lg-10 col-lg-offset-2">
+            <button type="reset" value="annuler" name="cancel" class="btn btn-default">annuler</button>
+            <button type="submit" value="envoyer" name="submit" class="btn btn-primary">envoyer</button>
+          </div>
+        </div>
+        </fieldset>
+    </form>
+</div>
 

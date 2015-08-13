@@ -13,7 +13,12 @@ echo "<div class='page-principale'>";
 //on vérifie qui nous appel
 if (isset($_REQUEST["section"])) {
     switch ($_REQUEST["section"]) {
-        
+        case "login" :
+            include "views/inscription-inc.php";
+            break ;
+        case"inscription-exec":
+            include"views/recup-inscript.php";
+            break ;
         case "affiche-label-liste":
             include("views/label-liste.inc.php");
             break;
