@@ -1,4 +1,6 @@
-<div class="well bs-component">
+
+<div class="col-lg-6">
+    <div class="well bs-component">
     <form class="form-horizontal" enctype="multipart/form-data" action="?" method="post" name="inscription">
         <input type="hidden" name="section" value="inscription-exec"/>
         <fieldset>
@@ -42,5 +44,6 @@
         </div>
         </fieldset>
     </form>
+</div>
 </div>
 

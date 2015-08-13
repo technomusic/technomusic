@@ -14,8 +14,14 @@
             $stmt->execute();
             
             unset($dbh); 
+            echo " <div><h2>Voici les données que vous avez rentrée</h2>
+            <div>votre nom :". $_REQUEST['nom']."</div>
+                <div>Votre prenom :". $_REQUEST['prenom']."</div>
+            <div>Votre pseudo :". $_REQUEST['pseudo']."</div>
+                <div><a href='index.php' >veuillez confirmer . merci </a></div> ";
             
     }
+    
        
     catch(PDOException $e)
     {
