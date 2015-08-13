@@ -9,6 +9,7 @@ echo "<thead><tr><th>Nom</th></tr></thead><tbody>";
         $dbh = new PDO("mysql:host=$hostname;dbname=$dbname",   $username, $password);
         //$dbh = new PDO("sqlite:./data/movies.db");
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $dbh->query('SET NAMES utf8');
         $sql = "SELECT categorie.Categorie_ID AS id, categorie.Nom AS nom FROM categorie JOIN image ON categorie.Categorie_ID=image.Categorie_ID";
         $stmt = $dbh->query($sql);
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC))

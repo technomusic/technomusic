@@ -7,6 +7,7 @@
         $dbh = new PDO("mysql:host=$hostname;dbname=$dbname",   $username, $password);
         //$dbh = new PDO("sqlite:./data/movies.db");
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
+        $dbh->query('SET NAMES utf8');
         $sql = "SELECT label.Label_ID AS id, label.Description as description, label.Nom AS nom,image.url AS image FROM label JOIN image ON label.Label_ID=image.Label_ID WHERE label.Label_ID=:id";
         $stmt = $dbh->prepare($sql);
         $stmt->bindValue("id", $_REQUEST["id"]);

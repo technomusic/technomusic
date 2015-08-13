@@ -8,6 +8,7 @@
             $dbh = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
             //$dbh = new PDO("sqlite:./data/movies.db");
             $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $dbh->query('SET NAMES utf8');
             $sql = "SELECT artiste.Artiste_ID AS id, artiste.Nom AS nom, artiste.Prenom AS prenom, artiste.Surnom AS pseudo, DATE_FORMAT(artiste.Date_Naissance,'%d/%m/%Y') AS dn FROM artiste LEFT JOIN image ON artiste.Artiste_ID=image.Artiste_ID";
             $stmt = $dbh->query($sql);
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
