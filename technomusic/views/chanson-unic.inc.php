@@ -7,6 +7,7 @@
         $dbh = new PDO("mysql:host=$hostname;dbname=$dbname",   $username, $password);
         //$dbh = new PDO("sqlite:./data/movies.db");
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
+        $dbh->query('SET NAMES utf8');
         $sql = "SELECT chanson.Chanson_ID AS id, chanson.Titre AS titre, chanson.Duree AS duree, chanson.Annee AS annee, categorie.Nom AS nomcat, artiste.Nom AS nomart, image.url AS image FROM chanson JOIN categorie ON chanson.Categorie_ID=categorie.Categorie_ID JOIN interprete_chanson ON chanson.Chanson_ID=interprete_chanson.Chanson_ID JOIN artiste ON interprete_chanson.Artiste_ID=artiste.Artiste_ID JOIN image ON image.Artiste_ID=artiste.Artiste_ID WHERE chanson.Chanson_ID=:id";
         $stmt = $dbh->prepare($sql);
         $stmt->bindValue("id", $_REQUEST["id"]);
