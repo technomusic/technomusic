@@ -35,6 +35,9 @@ if (isset($_REQUEST["section"])) {
         case "affiche-artiste-liste":
             include("views/artiste-liste.inc.php");
             break;
+        case "affiche-album-unic":
+            include("views/album-unic.inc.php");
+            break;
     }
 //si personne ne nous a appelé c'est qu'on arrive pour la première fois. On affiche donc la page d'accueil
 } else {
