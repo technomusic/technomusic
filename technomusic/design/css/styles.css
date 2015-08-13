@@ -175,3 +175,9 @@ box-shadow : 8px 8px 8px #737373 ;
 .men-td a:link:active, .men-td a:visited:active { 
     color: white ;
 }
+.im-chanson-unique {
+    
+    float : right ;
+    top:0px ;
+    
+}
