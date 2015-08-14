@@ -1,5 +1,4 @@
 <div class="col-lg-6">
-    <div class="panel panel-primary">
 
         <?php
         try {
@@ -82,5 +81,4 @@
 
     <button type="submit" class="btn btn-default">Modifier</button>
         
-</div>
 </div>
