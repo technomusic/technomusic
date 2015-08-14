@@ -6,7 +6,7 @@
         //$dbh = new PDO("sqlite:./data/movies.db");
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $dbh->query('SET NAMES utf8');
-        echo var_dump($_REQUEST);
+        //echo var_dump($_REQUEST);
 
         if ((isset($_REQUEST['artiste']) && ($_REQUEST['artiste'] == 'on'))) {
             echo "<table class=\"table table-striped table-hover \"><thead><tr><th>Nom</th><th>Prénom</th><th>Pseudo</th><th>Date de naissance</th></tr></thead><tbody>";
