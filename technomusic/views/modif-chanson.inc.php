@@ -82,65 +82,37 @@
     <form class="form-horizontal" enctype="multipart/form-data" action="?" method="post" name="modif-chanson">
         <div class="form-group">
             <label for="nom">Nom</label>
-<<<<<<< HEAD
-            <input type="text" class="form-control" id="nom" value="<?php echo $nom;?>">
-=======
             <input type="text" class="form-control" id="nom" value="<?php echo $titre; ?>">
->>>>>>> origin/master
         </div>
 
         <div class="form-group">
             <label for="duree">Durée</label>
-<<<<<<< HEAD
-            <input type="text" class="form-control" id="duree" value="<?php echo $duree;?>">
-=======
             <input type="text" class="form-control" id="duree" value="<?php echo $duree; ?>">
->>>>>>> origin/master
         </div>
 
         <div class="form-group">
             <label for="annee">Année</label>
-<<<<<<< HEAD
-            <input type="text" class="form-control" id="annee" value="<?php echo $annee;?>">
-=======
             <input type="text" class="form-control" id="annee" value="<?php echo $annee; ?>">
->>>>>>> origin/master
         </div>
 
         <div class="form-group">
             <label for="categorie">Catégorie</label>
-<<<<<<< HEAD
-            <input type="text" class="form-control" id="cat" value="<?php echo $categorie;?>">
-=======
             <input type="text" class="form-control" id="cat" value="<?php echo $nomcat; ?>">
->>>>>>> origin/master
         </div>
 
         <div class="form-group">
             <label for="nominter">Interpète</label>
-<<<<<<< HEAD
-            <input type="text" class="form-control" id="nominter" value="<?php echo $nominter;?>">
-=======
             <?php echo $txtinterprete; ?>
->>>>>>> origin/master
         </div>
 
         <div class="form-group">
             <label for="nomcompo">Compositeur</label>
-<<<<<<< HEAD
-            <input type="text" class="form-control" id="nomcompo" value="<?php echo $nomcompo;?>">
-=======
             <?php echo $txtcompositeur; ?>
->>>>>>> origin/master
         </div>
 
         <div class="form-group">
             <label for="nomparol">Parolier</label>
-<<<<<<< HEAD
-            <input type="text" class="form-control" id="nomparol" value="<?php echo $nomparol;?>">
-=======
             <?php echo $txtparolier; ?>
->>>>>>> origin/master
         </div>
     </form>
 
