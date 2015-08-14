@@ -38,18 +38,12 @@ font-size:20px ;
 text-align:center ;
 }*/
 .page-principale{
-<<<<<<< HEAD
+
     width: 80% ;
     height:725px ;
     margin-left : 250px  ;
     overflow: auto ;    
-=======
-    width: 1300px ;
-  
-    margin-left : 200px  ;
-    overflow: auto ; 
-    
->>>>>>> origin/master
+
 }
 table.table.table-striped.table-hover{
     background-color: white ;
