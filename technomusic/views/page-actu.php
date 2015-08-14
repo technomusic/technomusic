@@ -8,7 +8,8 @@
                 </div>
                 <div class=actu1-2>
                     Après le clip hallucinogène de L$D, A$AP Rocky est de retour avec Jukebox Joints, morceau issu de son album At.Long.Last
-                    .A$AP sorti en juin dernier. Si les stupéfiants sont toujours au programme, la vidéo commence cette...</div>
+                    .A$AP sorti en juin dernier. Si les stupéfiants sont toujours au programme, la vidéo commence cette...
+                </div>
             </div>
             <div class="actu1">
 

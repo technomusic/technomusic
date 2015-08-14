@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="design/bootstrap/css/bootstrap-cerulean.min.css"/>
         <link rel="stylesheet" href="design/css/newcss.css"/>
         <link rel="stylesheet" href="design/css/styles.css" >
+            <link rel="stylesheet" href="design/css/actuStyles.css" >
             <script type="text/javascript" src="newjavascript.js"></script>
     </head>
 

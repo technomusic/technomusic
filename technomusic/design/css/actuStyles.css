@@ -3,12 +3,7 @@
   
 }
 .actu1 {
-<<<<<<< HEAD
- width : 50% ;
- height : 200px ;
- background-color: #61C7E6 ;
-}
-=======
+
  width : 600px ;
  height : 600px ;
  background-color: #CAC1C2;
@@ -28,7 +23,7 @@
 }
 .actu1-2 {
     background-color: white ;
-    width : 570px ;
+    width : 560px ;
     height : 200px ;
     margin : 0 auto ;
     
@@ -41,4 +36,4 @@
 .actu2 {
     float : left ;
 }
->>>>>>> origin/master
+
