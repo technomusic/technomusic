@@ -4,17 +4,18 @@
         <?php
         echo "Liste des albums : &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href=\"#\" class=\"btn btn-success\">Ajout</a><br/><br/>";
 
-        echo "<thead><tr><th>Titre</th><th>Année</th><th>Interprete(s)</th><th>Compositeur(s)</th><th>Conducteur(s)</th><th>Label</th></tr></thead><tbody>";
+        echo "<thead><tr><th></th><th>Titre</th><th>Année</th><th>Interprete(s)</th><th>Compositeur(s)</th><th>Conducteur(s)</th><th>Label</th></tr></thead><tbody>";
         try {
             $dbh = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
             //$dbh = new PDO("sqlite:./data/movies.db");
             $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $dbh->query('SET NAMES utf8');
-            $sql = "SELECT album.Album_ID AS id, album.Titre AS titre, album.Annee AS annee, label.Nom as label, artisteinterprete.Nom AS nominter, artistecompositeur.Nom AS nomcompo, artisteconducteur.Nom AS nomconduct FROM album JOIN interprete_album ON album.Album_ID=interprete_album.Album_ID JOIN artiste AS artisteinterprete ON interprete_album.Artiste_ID=artisteinterprete.Artiste_ID JOIN label ON album.Label_ID=label.Label_ID JOIN compositeur_album ON album.Album_ID=compositeur_album.Album_ID JOIN artiste AS artistecompositeur ON compositeur_album.Artiste_ID=artistecompositeur.Artiste_ID JOIN conducteur_album ON album.Album_ID=conducteur_album.Album_ID JOIN artiste AS artisteconducteur ON conducteur_album.Artiste_ID=artisteconducteur.Artiste_ID";
+            $sql = "SELECT image.url AS image, album.Album_ID AS id, album.Titre AS titre, album.Annee AS annee, label.Nom as label, artisteinterprete.Nom AS nominter, artistecompositeur.Nom AS nomcompo, artisteconducteur.Nom AS nomconduct FROM album JOIN interprete_album ON album.Album_ID=interprete_album.Album_ID JOIN artiste AS artisteinterprete ON interprete_album.Artiste_ID=artisteinterprete.Artiste_ID JOIN label ON album.Label_ID=label.Label_ID JOIN compositeur_album ON album.Album_ID=compositeur_album.Album_ID JOIN artiste AS artistecompositeur ON compositeur_album.Artiste_ID=artistecompositeur.Artiste_ID JOIN conducteur_album ON album.Album_ID=conducteur_album.Album_ID JOIN artiste AS artisteconducteur ON conducteur_album.Artiste_ID=artisteconducteur.Artiste_ID JOIN image ON album.Album_ID=image.Album_ID";
             $stmt = $dbh->query($sql);
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
             $id = $row["id"];
             $titre = $row["titre"];
+            $image = $row["image"];
             $interprete = array($row["nominter"]);
             $compositeur = array($row["nomcompo"]);
             $conducteur = array($row["nomconduct"]);
@@ -79,13 +80,17 @@
 
 
                     //...ensuite on affiche la ligne de la table...
-                    echo "<tr><td><a href=\"?section=affiche-album-unic&id=" . $id . "\">" . $titre . "</a></td><td>" . $annee . "</td><td>" . $txtinterprete . "</td><td>" . $txtcompositeur . "</td><td>" . $txtconducteur . "</td><td>" . $label . "</td></tr>";
+                    $image = "data/images/" . $image;
+                    echo "<tr><td><img ";
+                    ?> <?php fctaffichimage($image, 75, 75) ?> <?php
+                    echo "/\"></td><td><a href=\"?section=affiche-album-unic&id=" . $id . "\">" . $titre . "</a></td><td>" . $annee . "</td><td>" . $txtinterprete . "</td><td>" . $txtcompositeur . "</td><td>" . $txtconducteur . "</td><td>" . $label . "</td></tr>";
                     //...puis on réinitialise toutes les variables pour le prochain tour
                     $txtconducteur = "";
                     $txtinterprete = "";
                     $txtcompositeur = "";
                     $id = $row["id"];
                     $titre = $row["titre"];
+                    $image = $row["image"];
                     $interprete = array($row["nominter"]);
                     $compositeur = array($row["nomcompo"]);
                     $conducteur = array($row["nomconduct"]);
@@ -133,7 +138,10 @@
             $conducteur = array();
 
 
-            echo "<tr><td><a href=\"?section=affiche-album-unic&id=" . $id . "\">" . $titre . "</a></td><td>" . $annee . "</td><td>" . $txtinterprete . "</td><td>" . $txtcompositeur . "</td><td>" . $txtconducteur . "</td><td>" . $label . "</td></tr>";
+            $image = "data/images/" . $image;
+            echo "<tr><td><img ";
+            ?> <?php fctaffichimage($image, 75, 75) ?> <?php
+            echo "/\"></td><td><a href=\"?section=affiche-album-unic&id=" . $id . "\">" . $titre . "</a></td><td>" . $annee . "</td><td>" . $txtinterprete . "</td><td>" . $txtcompositeur . "</td><td>" . $txtconducteur . "</td><td>" . $label . "</td></tr>";
             unset($dbh);
         } catch (PDOException $e) {
             echo $e->getMessage();
