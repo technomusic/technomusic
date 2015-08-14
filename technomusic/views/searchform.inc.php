@@ -7,19 +7,19 @@
                 <div class="form-group">
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" name="table" value="1"> Artiste
+                            <input type="checkbox" name="artiste"> Artiste
                         </label>
                         <label>
-                            <input type="checkbox" name="table" value="2"> Chanson
+                            <input type="checkbox" name="chanson"> Chanson
                         </label>
                         <label>
-                            <input type="checkbox" name="table" value="3"> Album
+                            <input type="checkbox" name="album"> Album
                         </label>
                         <label>
-                            <input type="checkbox" name="table" value="4"> Label
+                            <input type="checkbox" name="label"> Label
                         </label>
                         <label>
-                            <input type="checkbox" name="table" value="5"> Catégorie
+                            <input type="checkbox" name="categorie"> Catégorie
                         </label>
                     </div>
                     <label class="control-label" for="inputDefault">Votre recherche</label>
