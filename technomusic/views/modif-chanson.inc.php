@@ -5,26 +5,30 @@
             
             try
             {
-                $dbh = new PDO("mysql:host=$hostname;dbname=filhebdo",   $username, $password);
-                //$dbh = new PDO("sqlite:./data/movies.db");
-                $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
-                $sql = "SELECT * FROM chanson WHERE id=:id";
+                $dbh = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
+                $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $dbh->query('SET NAMES utf8'); 
+                $sql = "SELECT chanson.Chanson_ID AS id, chanson.Titre AS nom, chanson.Annee AS annee, chanson.Duree AS duree, categorie.Nom AS categorie, artisteinterprete.Nom AS nominter, artistecompositeur.Nom AS nomcompo, artisteparolier.Nom AS nomparol, image.url AS image FROM chanson LEFT JOIN interprete_chanson ON chanson.Chanson_ID=interprete_chanson.Chanson_ID LEFT JOIN artiste AS artisteinterprete ON interprete_chanson.Artiste_ID=artisteinterprete.Artiste_ID LEFT JOIN categorie ON chanson.Categorie_ID=categorie.Categorie_ID LEFT JOIN compositeur_chanson ON chanson.Chanson_ID=compositeur_chanson.Chanson_ID LEFT JOIN artiste AS artistecompositeur ON compositeur_chanson.Artiste_ID=artistecompositeur.Artiste_ID LEFT JOIN parolier_chanson ON chanson.Chanson_ID=parolier_chanson.Chanson_ID LEFT JOIN artiste AS artisteparolier ON parolier_chanson.Artiste_ID=artisteparolier.Artiste_ID JOIN image ON chanson.Chanson_ID=image.Chanson_ID WHERE chanson.Chanson_ID=:id";
                 $stmt = $dbh->prepare($sql);
                 $stmt->bindValue("id", $_REQUEST["id"]);
                 $stmt->execute();
+                
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
                 {
-                    $nom = $row["nom"];
+                    $nom = ($row["nom"]);
                     $duree = $row["duree"];
                     $annee = $row["annee"];
                     $categorie = $row["categorie"];
                     $nominter = $row["nominter"];
                     $nomcompo = $row["nomcompo"];
                     $nomparol = $row["nomparol"];
-                }
+                    
+                
                 unset($dbh);
             }
-            catch(PDOException $e)
+            }
+        
+        catch(PDOException $e)
             {
                 echo $e->getMessage();
             } 
@@ -32,38 +36,38 @@
         ?>
     <form class="form-horizontal" enctype="multipart/form-data" action="?" method="post" name="modif-chanson">
         <div class="form-group">
-            <label for="exampleInputEmail1">Nom</label>
+            <label for="nom">Nom</label>
             <input type="text" class="form-control" id="nom" placeholder="<?php echo $nom;?>">
         </div>
         
         <div class="form-group">
-            <label for="exampleInputEmail1">Durée</label>
-            <input type="text" class="form-control" id="duree" placeholder="">
+            <label for="duree">Durée</label>
+            <input type="text" class="form-control" id="duree" placeholder="<?php echo $duree;?>">
         </div>
         
         <div class="form-group">
-            <label for="exampleInputEmail1">Année</label>
-            <input type="text" class="form-control" id="annee" placeholder="">
+            <label for="annee">Année</label>
+            <input type="text" class="form-control" id="annee" placeholder="<?php echo $annee;?>">
         </div>
         
         <div class="form-group">
-            <label for="exampleInputEmail1">Catégorie</label>
-            <input type="text" class="form-control" id="cat" placeholder="">
+            <label for="categorie">Catégorie</label>
+            <input type="text" class="form-control" id="cat" placeholder="<?php echo $categorie;?>">
         </div>
         
         <div class="form-group">
-            <label for="exampleInputEmail1">Interpète</label>
-            <input type="text" class="form-control" id="nominter" placeholder="">
+            <label for="nominter">Interpète</label>
+            <input type="text" class="form-control" id="nominter" placeholder="<?php echo $nominter;?>">
         </div>
         
         <div class="form-group">
-            <label for="exampleInputEmail1">Compositeur</label>
-            <input type="text" class="form-control" id="nomcompo" placeholder="">
+            <label for="nomcompo">Compositeur</label>
+            <input type="text" class="form-control" id="nomcompo" placeholder="<?php echo $nomcompo;?>">
         </div>
         
         <div class="form-group">
-            <label for="exampleInputEmail1">Parolier</label>
-            <input type="text" class="form-control" id="nomparol" placeholder="">
+            <label for="nomparol">Parolier</label>
+            <input type="text" class="form-control" id="nomparol" placeholder="<?php echo $nomparol;?>">
         </div>
     </form>
 
