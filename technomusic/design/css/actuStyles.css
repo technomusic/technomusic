@@ -30,7 +30,9 @@
     
 }
 .frame {
-    alignment-baseline: middle ;
+ 
+    margin : 0 auto ;
+    display:block;
 }
 .actu2 {
     float : left ;

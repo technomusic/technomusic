@@ -42,7 +42,7 @@ and open the template in the editor.
             </div>
             <div class="actu1">
                 <div class="actu1-1">
-                    <iframe width="420" height="315" src="https://www.youtube.com/embed/YII3KXQ86F0" frameborder="0" allowfullscreen></iframe>
+                    <iframe class = "frame" width="420" height="315" src="https://www.youtube.com/embed/YII3KXQ86F0" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="actu1-2">Attendu le 28 août, le double-album "Mon coeur avait raison" de Maître Gims contiendra notamment un duo avec... 
                     Sia, intitulé "Je te pardonne". Le rappeur de la Sexion d'Assaut raconte la genèse de ce duo événement : "Elle m'a ..
