@@ -1,6 +1,5 @@
 <div class="col-lg-6">
-    <div class="panel panel-primary">
-
+    <div class="well bs-component">
         <?php
         try {
             $dbh = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
@@ -26,14 +25,37 @@
             }
 
             unset($dbh);
-            $image = "data/images/" . $image;
-            echo "<div class=\"panel-heading\"><h3 class=\"panel-title\">" . $nom . "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href=\"?section=modif-label&id=" . $id . "\" class=\"btn btn-warning\">Moddifier</a><a href=\"?section=delete-movie-exec&id=" . $id . "\" class=\"btn btn-danger\">Supprimer</a></h3></div><div><img ";
-            ?> <?php fctaffichimage($image, 200, 200) ?> <?php
-            echo "/\"></div><div><h5>" . $description . "</h5></div>";
+            
         } catch (PDOException $e) {
             echo $e->getMessage();
         }
         ?>
+        
+        <form class="form-horizontal" enctype="multipart/form-data" action="?" method="post" name="modif-chanson">
+        
+        <div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" class="form-control" id="nom" value="<?php echo $nom; ?>">
+        </div>
+       
+        <div class="form-group">
+                <label for="image">Image</label>
+                <input type="file" id="<?php echo $image; ?>">           
+        </div>
 
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea rows="3" class="form-control" id="description"><?php echo $description; ?></textarea>
+        </div>
+            
+    </form>
+
+    <button type="submit" class="btn btn-default">Modifier</button>
+    </div>
+</div>
+        
+        
+        
+        
     </div>
 </div>
