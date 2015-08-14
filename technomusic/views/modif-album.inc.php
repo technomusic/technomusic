@@ -1,4 +1,5 @@
 <div class="col-lg-6">
+    <div class="well bs-component">
 
         <?php
         try {
@@ -10,75 +11,72 @@
             $stmt = $dbh->prepare($sql);
             $stmt->bindValue("id", $_REQUEST["id"]);
             $stmt->execute();
-            
-         while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
-                {
-            $row = $stmt->fetch(PDO::FETCH_ASSOC);
-            $id = $row["id"];
-            $titre = $row["titre"];
-            $annee = $row["annee"];
-            $label = $row["label"];
-            $image = $row["image"];
-            $nomchanson = $row["nomchanson"];
-            $nominter = $row["nominter"];
-            $nomcompo = $row["nomcompo"];
-            $nomconduct = $row["nomconduct"];
-            $txtinterprete = "";
-            $txtcompositeur = "";
-            $txtconducteur = "";
-            $txtchanson = "";
-            unset($dbh);
-                }
+
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                $row = $stmt->fetch(PDO::FETCH_ASSOC);
+                $id = $row["id"];
+                $titre = $row["titre"];
+                $annee = $row["annee"];
+                $label = $row["label"];
+                $image = $row["image"];
+                $nomchanson = $row["nomchanson"];
+                $nominter = $row["nominter"];
+                $nomcompo = $row["nomcompo"];
+                $nomconduct = $row["nomconduct"];
+                $txtinterprete = "";
+                $txtcompositeur = "";
+                $txtconducteur = "";
+                $txtchanson = "";
+                unset($dbh);
             }
-        
-            catch(PDOException $e)
-            {
-                echo $e->getMessage();
-            } 
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
         ?>
 
-<form class="form-horizontal" enctype="multipart/form-data" action="?" method="post" name="modif-chanson">
-        <div class="form-group">
-            <label for="titre">Nom</label>
-            <input type="text" class="form-control" id="nom" value="<?php echo $titre;?>">
-        </div>
-        
-        <div class="form-group">
-            <label for="annee">Année</label>
-            <input type="text" class="form-control" id="duree" value="<?php echo $annee;?>">
-        </div>
-            
-        <div class="form-group">
-            <label for="nominter">Interpète</label>
-            <input type="text" class="form-control" id="nominter" value="<?php echo $nominter;?>">
-        </div>
-        
-        <div class="form-group">
-            <label for="nomcompo">Compositeur</label>
-            <input type="text" class="form-control" id="nomcompo" value="<?php echo $nomcompo;?>">
-        </div>
-        
-        <div class="form-group">
-            <label for="nomconduct">Conducteur</label>
-            <input type="text" class="form-control" id="nomparol" value="<?php echo $nomconduct;?>">
-        </div>
-    
-        <div class="form-group">
-            <label for="chansons">Chansons</label>
-            <input type="text" class="form-control" id="annee" value="<?php echo $nomchanson;?>">
-        </div>
-        
-        <div class="form-group">
-            <label for="label">Label</label>
-            <input type="text" class="form-control" id="cat" value="<?php echo $label;?>">
-        </div>
-    
-        <div class="form-group">
-            <label for="image">Image</label>
-            <input type="file" id="<?php echo $image;?>">           
-        </div>
-    </form>
+        <form class="form-horizontal" enctype="multipart/form-data" action="?" method="post" name="modif-chanson">
+            <div class="form-group">
+                <label for="titre">Nom</label>
+                <input type="text" class="form-control" id="nom" value="<?php echo $titre; ?>">
+            </div>
 
-    <button type="submit" class="btn btn-default">Modifier</button>
-        
+            <div class="form-group">
+                <label for="annee">Année</label>
+                <input type="text" class="form-control" id="duree" value="<?php echo $annee; ?>">
+            </div>
+
+            <div class="form-group">
+                <label for="nominter">Interpète</label>
+                <input type="text" class="form-control" id="nominter" value="<?php echo $nominter; ?>">
+            </div>
+
+            <div class="form-group">
+                <label for="nomcompo">Compositeur</label>
+                <input type="text" class="form-control" id="nomcompo" value="<?php echo $nomcompo; ?>">
+            </div>
+
+            <div class="form-group">
+                <label for="nomconduct">Conducteur</label>
+                <input type="text" class="form-control" id="nomparol" value="<?php echo $nomconduct; ?>">
+            </div>
+
+            <div class="form-group">
+                <label for="chansons">Chansons</label>
+                <input type="text" class="form-control" id="annee" value="<?php echo $nomchanson; ?>">
+            </div>
+
+            <div class="form-group">
+                <label for="label">Label</label>
+                <input type="text" class="form-control" id="cat" value="<?php echo $label; ?>">
+            </div>
+
+            <div class="form-group">
+                <label for="image">Image</label>
+                <input type="file" id="<?php echo $image; ?>">           
+            </div>
+        </form>
+
+        <button type="submit" class="btn btn-default">Modifier</button>
+
+    </div>
 </div>
