@@ -11,16 +11,12 @@
             $stmt = $dbh->prepare($sql);
             $stmt->bindValue("id", $_REQUEST["id"]);
             $stmt->execute();
-            $row = $stmt->fetch(PDO::FETCH_ASSOC);
-            $id = $row["id"];
-            $titre = $row["titre"];
-            $nomcat = $row["nomcat"];
-            $image = $row["image"];
-            $interprete = array($row["nominter"]);
-            $compositeur = array($row["nomcompo"]);
-            $parolier = array($row["nomparo"]);
-            $annee = $row["annee"];
-            $duree = $row["duree"];
+            //$row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            $interprete = array();
+            $compositeur = array();
+            $parolier = array();
+
             $txtinterprete = "";
             $txtcompositeur = "";
             $txtparolier = "";
@@ -28,6 +24,12 @@
                 $interprete[] = $row["nominter"];
                 $compositeur[] = $row["nomcompo"];
                 $parolier[] = $row["nomparo"];
+                $id = $row["id"];
+                $titre = $row["titre"];
+                $nomcat = $row["nomcat"];
+                $image = $row["image"];
+                $annee = $row["annee"];
+                $duree = $row["duree"];
             }
             //... on élimine les doublons interprete...
             $result = array_unique($interprete);

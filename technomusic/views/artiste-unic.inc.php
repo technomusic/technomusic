@@ -41,7 +41,7 @@
 
             unset($dbh);
             $image = "data/images/" . $image;
-            echo "<div class=\"panel-heading\"><h3 class=\"panel-title\">" . $nom . "&nbsp" . $surnom . "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . $prenom . "<a href=\"?section=update-movie-form&id=" . $id . "\" class=\"btn btn-warning\">Moddifier</a><a href=\"?section=delete-movie-exec&id=" . $id . "\" class=\"btn btn-danger\">Supprimer</a></h3></div><div>" . $dn . $lieu . "</div><div><img ";
+            echo "<div class=\"panel-heading\"><h3 class=\"panel-title\">" . $nom . "&nbsp" . $surnom . "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . $prenom . "<a href=\"?section=modif-artiste.inc.php&id=" . $id . "\" class=\"btn btn-warning\">Moddifier</a><a href=\"?section=delete-movie-exec&id=" . $id . "\" class=\"btn btn-danger\">Supprimer</a></h3></div><div>" . $dn . $lieu . "</div><div><img ";
             ?> <?php fctaffichimage($image, 200, 200) ?> <?php
             echo "/\"></div><div><h5>" . $bio . "</h5></div>";
         } catch (PDOException $e) {

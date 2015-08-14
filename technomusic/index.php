@@ -58,6 +58,9 @@ if (isset($_REQUEST["section"])) {
         case "modif-album":
             include ("views/modif-album.inc.php");
             break;
+        case "modif-artiste":
+            include ("views/modif-artiste.inc.php");
+            break;
     }
 //si personne ne nous a appelé c'est qu'on arrive pour la première fois. On affiche donc la page d'accueil
 } else {
