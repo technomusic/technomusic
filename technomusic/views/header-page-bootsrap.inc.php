@@ -52,7 +52,7 @@
                             <div class="tab2">
 
                                 <table>
-                                    <tr><td><input class="log" type="submit" name="connection" value = "connection"width = "50px" ></td>
+                                    <tr><td><input class="log" type="submit" name="connection" value = "connection"  width = "50px" ></td>
                                         <td><a href="?section=login"><input class="log" type="buttont" name="inscription" value = "inscription" width = "50px" ></a></td></tr>
 
                                 </table>
