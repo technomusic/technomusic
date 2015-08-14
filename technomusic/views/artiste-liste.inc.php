@@ -4,7 +4,7 @@
 
         <?php
         echo "Liste des artistes : &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href=\"#\" class=\"btn btn-success\">Ajout</a><br/><br/>";
-        
+
         echo "<thead><tr><th>Nom</th><th>Prénom</th><th>Pseudo</th><th>Date de naissance</th></tr></thead><tbody>";
         try {
             $dbh = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);

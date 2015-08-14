@@ -3,8 +3,8 @@
 
         <?php
         echo "Liste des chansons : &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href=\"#\" class=\"btn btn-success\">Ajout</a><br/><br/>";
-        
-        
+
+
         echo "<thead><tr><th>Titre</th><th>Année</th><th>Durée(secondes)</th><th>Catégorie</th><th>Interprete(s)</th><th>Compositeur(s)</th><th>Conducteur(s)</th></tr></thead><tbody>";
         try {
             $dbh = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
