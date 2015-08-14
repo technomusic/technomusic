@@ -46,6 +46,9 @@ if (isset($_REQUEST["section"])) {
         case "affiche-artiste-unic":
             include("views/artiste-unic.inc.php");
             break;
+        case "search-movie-form":
+            include("views/searchform.inc.php");
+            break;
     }
 //si personne ne nous a appelé c'est qu'on arrive pour la première fois. On affiche donc la page d'accueil
 } else {
