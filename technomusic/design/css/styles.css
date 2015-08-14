@@ -1,6 +1,13 @@
 .body {
   background-color: #55EAF4 ;
-
+ scrollbar-face-color: #000000; 
+ scrollbar-shadow-color: #000000; 
+ scrollbar-highlight-color: #000000; 
+ scrollbar-3dlight-color: #000000; 
+ scrollbar-darkshadow-color: #000000; 
+ scrollbar-track-color: #000000; 
+ scrollbar-arrow-color: #000000; 
+ scrollbar-base-color: #000000 
 }
 
 
@@ -31,10 +38,11 @@ font-size:20px ;
 text-align:center ;
 }*/
 .page-principale{
-    width: 80% ;
-    height:725px ;
-    margin-left : 250px  ;
-    overflow: auto ;    
+    width: 1300px ;
+  
+    margin-left : 200px  ;
+    overflow: auto ; 
+    
 }
 table.table.table-striped.table-hover{
     background-color: white ;

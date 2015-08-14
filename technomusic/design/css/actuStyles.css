@@ -1,9 +1,37 @@
 .accueil {
-  whidth : 100%
+  whidth : 1350px ;
+  position : absolute ;
+  float :left ;
   
 }
 .actu1 {
- width : 50% ;
- height : 200px ;
- background-color: #61C7E6 ;
+ width : 600px ;
+ height : 600px ;
+ background-color: #CAC1C2;
+ float :left ;
+ border : 3px solid black;
+ border-style : inset ;
+ margin : 20px ;
+
+}
+.actu1-1 {
+    width : 600px ;
+    height : 355px ;
+    margin : 0 auto ;
+    padding : 20px ;
+  
+   
+}
+.actu1-2 {
+    background-color: white ;
+    width : 570px ;
+    height : 200px ;
+    margin : 0 auto ;
+    
+}
+.frame {
+    alignment-baseline: middle ;
+}
+.actu2 {
+    float : left ;
 }
