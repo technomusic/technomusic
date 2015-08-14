@@ -24,10 +24,9 @@
             </div>    
             <div class="actu1">
                 <div class ="actu1-1">
-                    <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/wSXPHNHuw7A" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VHrLPs3_1Fs" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <div class="actu1-2">Actuellement en vacances aux Etats-Unis, après avoir terminé sa tournée acoustique, Tal multiplie les projets.
-                    Déjà égérie Tex, la chanteuse sortira en septembre sa propre collection de lingerie en partenariat avec la marque française 
+                <div class="actu1-2">Le jeune Britannique de 22 ans a égréné les chansons de son premier album devant un public varié et acquis à sa cause. Son charme a opéré...
                 </div>                    
             </div>
             <div class="actu1">
