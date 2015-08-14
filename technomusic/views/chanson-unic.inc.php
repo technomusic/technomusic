@@ -74,7 +74,7 @@
             $parolier = array();
 
             $image = "data/images/" . $image;
-            echo "<div class=\"panel-heading\"><h3 class=\"panel-title\">" . $titre . "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp(" . $annee . ")<a href=\"?section=update-movie-form&id=" . $id . "\" class=\"btn btn-warning\">Moddifier</a><a href=\"?section=delete-movie-exec&id=" . $id . "\" class=\"btn btn-danger\">Supprimer</a></h3></div><div class=\"panel-body\"><h3>" . $duree . " secondes&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . $nomcat . "</h3><div><h4>Interprète(s) : </h4><h5>" . $txtinterprete . "</h5> </div><div><h4>Compositeur : </h4><h5>" . $txtcompositeur . "</h5></div><div><h4>Parolier(s) : </h4><h5>" . $txtparolier . "</h5></div><div class='im-chanson-unique'><img ";
+            echo "<div class=\"panel-heading\"><h3 class=\"panel-title\">" . $titre . "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp(" . $annee . ")<a href=\"?section=modif-chanson&id=" . $id . "\" class=\"btn btn-warning\">Moddifier</a><a href=\"?section=delete-movie-exec&id=" . $id . "\" class=\"btn btn-danger\">Supprimer</a></h3></div><div class=\"panel-body\"><h3>" . $duree . " secondes&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . $nomcat . "</h3><div><h4>Interprète(s) : </h4><h5>" . $txtinterprete . "</h5> </div><div><h4>Compositeur : </h4><h5>" . $txtcompositeur . "</h5></div><div><h4>Parolier(s) : </h4><h5>" . $txtparolier . "</h5></div><div class='im-chanson-unique'><img ";
             ?> <?php fctaffichimage($image, 200, 200) ?> <?php
             echo "/\"></div></div>";
             /* echo "

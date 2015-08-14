@@ -52,6 +52,9 @@ if (isset($_REQUEST["section"])) {
         case "search-exec":
             include("views/search-exec.inc.php");
             break;
+        case "modif-chanson":
+            include ("views/modif-chanson.inc.php");
+            break;
     }
 //si personne ne nous a appelé c'est qu'on arrive pour la première fois. On affiche donc la page d'accueil
 } else {
