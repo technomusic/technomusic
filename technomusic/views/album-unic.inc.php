@@ -89,7 +89,7 @@
             $nomchanson = array();
 
             $image = "data/images/" . $image;
-            echo "<div class=\"panel-heading\"><h3 class=\"panel-title\">" . $titre . "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp(" . $annee . ")<a href=\"?section=update-movie-form&id=" . $id . "\" class=\"btn btn-warning\">Moddifier</a><a href=\"?section=delete-movie-exec&id=" . $id . "\" class=\"btn btn-danger\">Supprimer</a></h3></div><div><h4>Interprète : </h4><h5>" . $txtinterprete . "</h5> </div> <div><h4>Compositeur : </h4><h5>" . $txtcompositeur . "</h5></div><div><h4>Conducteur : </h4><h5>" . $txtconducteur . "</h5></div><div><img ";
+            echo "<div class=\"panel-heading\"><h3 class=\"panel-title\">" . $titre . "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp(" . $annee . ")<a href=\"?section=modif-album&id=" . $id . "\" class=\"btn btn-warning\">Moddifier</a><a href=\"?section=delete-movie-exec&id=" . $id . "\" class=\"btn btn-danger\">Supprimer</a></h3></div><div><h4>Interprète : </h4><h5>" . $txtinterprete . "</h5> </div> <div><h4>Compositeur : </h4><h5>" . $txtcompositeur . "</h5></div><div><h4>Conducteur : </h4><h5>" . $txtconducteur . "</h5></div><div><img ";
             ?> <?php fctaffichimage($image, 200, 200) ?> <?php
             echo "/\"></div><div><h4>Titres : </h4><h5>" . $txtchanson . "</h5></div>";
 
