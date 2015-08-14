@@ -13,6 +13,7 @@ and open the template in the editor.
     </head>
     <body>
         <div class="acceui">
+<<<<<<< HEAD
             <div class="actu1">
                 <div class="actu1-1">
                     <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/UtZBA1bVbcs?list=PL2kicx1M78xUeXOfRLsfrDWFckyR-oy88" frameborder="0" allowfullscreen></iframe>
@@ -70,5 +71,17 @@ and open the template in the editor.
                     
             </div>
        </div>
+=======
+            <div class="actu1"><div class="actu1-1">http://www.lesinrocks.com/inrocks.tv/aap-rocky-un-clip-retro-pour-jukebox-joints/</div><div class=actu1-2>
+                    Après le clip hallucinogène de L$D, A$AP Rocky est de retour avec Jukebox Joints, morceau issu de son album At.Long.Last
+                    .A$AP sorti en juin dernier. Si les stupéfiants sont toujours au programme, la vidéo commence cette...
+                </div></div>
+            <div class="actu2"></div>
+            <div class="actu3"></div>
+            <div class="actu4"></div>
+            <div class="actu5"></div>
+            <div class="actu6"></div>
+        </div>
+>>>>>>> origin/master
     </body>
 </html>

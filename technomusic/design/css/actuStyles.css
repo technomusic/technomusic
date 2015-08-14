@@ -1,10 +1,14 @@
 .accueil {
-  whidth : 1350px ;
-  position : absolute ;
-  float :left ;
+  whidth : 100%
   
 }
 .actu1 {
+<<<<<<< HEAD
+ width : 50% ;
+ height : 200px ;
+ background-color: #61C7E6 ;
+}
+=======
  width : 600px ;
  height : 600px ;
  background-color: #CAC1C2;
@@ -37,3 +41,4 @@
 .actu2 {
     float : left ;
 }
+>>>>>>> origin/master
