@@ -29,7 +29,7 @@ if ((isset($_POST['pseudo']) && !empty($_POST['pseudo'])) && (isset($_POST['pass
             <div>Votre pseudo :" . $_REQUEST['pseudo'] . "</div>
                 <div><a href='index.php' >Retour à l'accueil</a></div> ";
             } else {
-                echo "Ce pseudo est déjà utilisé";
+                echo "<div class='erreur'>Ce pseudo est déjà utilisé</div>";
             }
 
             unset($dbh);
