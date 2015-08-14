@@ -105,9 +105,10 @@ height : 8px ;
     height : 20px ;
     width : 80px ;
     font-size:10px ;
-    text-align: center ;
-    
-  
+    text-align: center ; 
+}
+.log1 {
+    color : black ;
 }
 .menu {
 position : fixed ;
@@ -179,9 +180,20 @@ box-shadow : 8px 8px 8px #737373 ;
 .im-chanson-unique {
     
     float : right ;
-    top:0px ;
     
 }
 .btn btn-danger {
-    float : right ;
+    float : left ;
+    dispay : inline ;
+  
+    
+}
+.btn btn-warning {
+    float :left ;
+    display : inline ;
+}
+.header-unic {
+    
+    width : 200px ;
+    display : inline ;
 }
