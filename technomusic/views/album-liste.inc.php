@@ -2,6 +2,8 @@
     <table class="table table-striped table-hover ">
 
         <?php
+        echo "Liste des albums : &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href=\"#\" class=\"btn btn-success\">Ajout</a><br/><br/>";
+
         echo "<thead><tr><th>Titre</th><th>Année</th><th>Interprete(s)</th><th>Compositeur(s)</th><th>Conducteur(s)</th><th>Label</th></tr></thead><tbody>";
         try {
             $dbh = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
