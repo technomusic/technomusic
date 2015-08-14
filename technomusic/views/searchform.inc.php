@@ -1,7 +1,7 @@
 <div class="col-lg-6">
     <div class="well bs-component">
         <form class="form-horizontal" enctype="multipart/form-data" method="get">
-            <input type="hidden" name="section" value="search-movie-exec"/>
+            <input type="hidden" name="section" value="search-exec"/>
             <fieldset>
                 <legend>Nouvelle recherche</legend>
                 <div class="form-group">
