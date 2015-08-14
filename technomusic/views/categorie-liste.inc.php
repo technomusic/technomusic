@@ -15,7 +15,7 @@
 
                 $id = $row["id"];
                 $nom = $row["nom"];
-                echo "<tr><td><a href=\"?section=affiche-categorie-unic&id=" . $id . "\">" . $nom . "</a></td></tr>";
+                echo "<tr><td>" . $nom . "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href=\"?section=update-movie-form&id=" . $id . "\" class=\"btn btn-warning\">Moddifier</a><a href=\"?section=delete-movie-exec&id=" . $id . "\" class=\"btn btn-danger\">Supprimer</a></td></tr>";
             }
             unset($dbh);
         } catch (PDOException $e) {
