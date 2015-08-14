@@ -41,37 +41,37 @@
 <form class="form-horizontal" enctype="multipart/form-data" action="?" method="post" name="modif-chanson">
         <div class="form-group">
             <label for="titre">Nom</label>
-            <input type="text" class="form-control" id="nom" placeholder="<?php echo $titre;?>">
+            <input type="text" class="form-control" id="nom" value="<?php echo $titre;?>">
         </div>
         
         <div class="form-group">
             <label for="annee">Année</label>
-            <input type="text" class="form-control" id="duree" placeholder="<?php echo $annee;?>">
+            <input type="text" class="form-control" id="duree" value="<?php echo $annee;?>">
         </div>
             
         <div class="form-group">
             <label for="nominter">Interpète</label>
-            <input type="text" class="form-control" id="nominter" placeholder="<?php echo $nominter;?>">
+            <input type="text" class="form-control" id="nominter" value="<?php echo $nominter;?>">
         </div>
         
         <div class="form-group">
             <label for="nomcompo">Compositeur</label>
-            <input type="text" class="form-control" id="nomcompo" placeholder="<?php echo $nomcompo;?>">
+            <input type="text" class="form-control" id="nomcompo" value="<?php echo $nomcompo;?>">
         </div>
         
         <div class="form-group">
             <label for="nomconduct">Conducteur</label>
-            <input type="text" class="form-control" id="nomparol" placeholder="<?php echo $nomconduct;?>">
+            <input type="text" class="form-control" id="nomparol" value="<?php echo $nomconduct;?>">
         </div>
     
         <div class="form-group">
             <label for="chansons">Chansons</label>
-            <input type="text" class="form-control" id="annee" placeholder="<?php echo $nomchanson;?>">
+            <input type="text" class="form-control" id="annee" value="<?php echo $nomchanson;?>">
         </div>
         
         <div class="form-group">
             <label for="label">Label</label>
-            <input type="text" class="form-control" id="cat" placeholder="<?php echo $label;?>">
+            <input type="text" class="form-control" id="cat" value="<?php echo $label;?>">
         </div>
     
         <div class="form-group">
