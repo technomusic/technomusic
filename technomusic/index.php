@@ -64,6 +64,9 @@ if (isset($_REQUEST["section"])) {
         case "modif-label":
             include ("views/modif-label.inc.php");
             break;
+        case "modif-categorie":
+            include ("views/modif-categorie.inc.php");
+            break;
     }
 //si personne ne nous a appelé c'est qu'on arrive pour la première fois. On affiche donc la page d'accueil
 } else {

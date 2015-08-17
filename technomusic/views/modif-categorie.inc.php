@@ -1,11 +1,9 @@
 <div class="bs-component">
-    <table class="table table-striped table-hover ">
+    <div class="well bs-component">
 
 
         <?php
-        echo "Liste des catégories : &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href=\"#\" class=\"btn btn-success\">Ajout</a><br/><br/>";
-
-        echo "<thead><tr><th></th><th>Nom</th></tr></thead><tbody>";
+       
         try {
             $dbh = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
             //$dbh = new PDO("sqlite:./data/movies.db");
@@ -19,15 +17,26 @@
                 $nom = $row["nom"];
                 $image = $row["image"];
                 $image = "data/images/" . $image;
-                echo "<tr><td><img ";
-                ?> <?php fctaffichimage($image, 75, 75) ?> <?php
-                echo "/\"></td><td>" . $nom . "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href=\"?section=modif-categorie&id=" . $id . "\" class=\"btn btn-warning\">Moddifier</a><a href=\"?section=delete-movie-exec&id=" . $id . "\" class=\"btn btn-danger\">Supprimer</a></td></tr>";
-            }
+                }
+
             unset($dbh);
+            
         } catch (PDOException $e) {
             echo $e->getMessage();
         }
         ?>
-
-    </table>
+    <form class="form-horizontal" enctype="multipart/form-data" action="?" method="post" name="modif-chanson">
+        
+        <div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" class="form-control" id="nom" value="<?php echo $nom; ?>">
+        </div>
+       
+        <div class="form-group">
+                <label for="image">Image</label>
+                <input type="file" id="<?php echo $image; ?>">           
+        </div>
+                   
+    </form>
+    </div>
 </div>
